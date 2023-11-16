@@ -1,0 +1,22 @@
+.NavbarWrapper{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: fit-content;
+    align-items: center;
+    justify-content: space-between;
+   
+    padding: 5vh 20px;
+}
+
+.TopSection{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.TopSection >div{
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+}

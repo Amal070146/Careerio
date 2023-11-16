@@ -1,9 +1,23 @@
-import React from 'react'
+import React, { ReactNode } from 'react'
+import { BrowserRouter as Router, Routes, Route, Outlet } from "react-router-dom";
+import { Navbar } from '../Navbar/Navbar';
+import { TopNav } from '../Navbar/TopNav';
+import styles from './HeroSection.module.css'
 
-type Props = {}
+
+type Props = {
+  children: ReactNode;
+}
 
 export const HeroSection = (props: Props) => {
   return (
-    <div>HeroSection</div>
-  )
+    <div className={styles.HeroSectionWrapper}>
+      <div className="app">
+        <Navbar />
+        <TopNav />
+        
+        <Outlet/>
+      </div>
+    </div>
+  );
 }
