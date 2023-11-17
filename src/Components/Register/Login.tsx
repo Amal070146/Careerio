@@ -1,18 +1,19 @@
 import { LogoSVG } from "../../assets/svg";
+import styles from "./Register.module.css";
 
-type Props = {
-    val:boolean;
-}
+type SignupProps = {
+  setval: React.Dispatch<React.SetStateAction<boolean>>;
+};
 
-export const Login = ({val}: Props) => {
+export const Login = ({ setval }: SignupProps) => {
   return (
-    <div>
+    <div className={styles.SignupWrapper}>
       <LogoSVG />
-      <div>
+      <div className={styles.HeaderSection}>
         <h2>Dedicated to navigating futures and shaping careers.</h2>
         <p>Welcome Back, Please login to your account</p>
       </div>
-      <div>
+      <form className={styles.FormWrapper}>
         <div>
           <p>Email</p>
           <input type="text" placeholder="robert.langster@gmail.com" />
@@ -21,19 +22,25 @@ export const Login = ({val}: Props) => {
           <p>Password</p>
           <input type="passwprd" placeholder="....." />
         </div>
-        <div>
+        <div className={styles.RembForg}>
           <div>
             <input type="checkbox" checked />
             Remeber Me
           </div>
           <div>Forgot Password?</div>
         </div>
-      </div>
-      <div>
+      </form>
+      <div className={styles.ButtonWrapper}>
         <button style={{ backgroundColor: "#4318FF" }}>Log In</button>
-        <button>Sign Up</button>
+        <button
+          onClick={() => {
+            setval(true);
+          }}
+        >
+          Sign Up
+        </button>
       </div>
-      <div>
+      <div className={styles.OtherLogins}>
         <p>Or, Login with</p>
         <a href="">Facebook</a>
         <a href="">LinkedIn</a>
@@ -41,4 +48,4 @@ export const Login = ({val}: Props) => {
       </div>
     </div>
   );
-}
+};

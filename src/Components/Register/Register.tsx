@@ -7,19 +7,14 @@ type Props = {};
 
 export const Register = (_props: Props) => {
   const [registerval, Setregisterval] = useState(true);
-  function signup(){
-    Setregisterval(true);
-  }
-  function login() {
-    Setregisterval(false);
-  }
+
   return (
     <div className={styles.RegistrationWrapper}>
       <div>
         {registerval ? (
-          <Signup val={registerval} />
+          <Signup setval={Setregisterval} />
         ) : (
-          <Login val={registerval} />
+          <Login setval={Setregisterval} />
         )}
       </div>
       <div className={styles.ImageContainer}>
