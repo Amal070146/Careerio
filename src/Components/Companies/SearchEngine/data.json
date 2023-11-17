@@ -1,0 +1,68 @@
+[
+    {
+        "name": "John Doe",
+        "profile": "https://example.com/images/john-doe.jpg",
+        "muid": "john@mulearn",
+        "roles": ["dev", "research"]
+    },
+    {
+        "name": "Jane Smith",
+        "profile": "https://example.com/images/jane-smith.jpg",
+        "muid": "jane@mulearn",
+        "roles": ["uiux", "dev"]
+    },
+    {
+        "name": "Alice Johnson",
+        "profile": "https://example.com/images/alice-johnson.jpg",
+        "muid": "alice@mulearn",
+        "roles": ["communication", "management"]
+    },
+    {
+        "name": "Bob Williams",
+        "profile": "https://example.com/images/bob-williams.jpg",
+        "muid": "bob@mulearn",
+        "roles": ["dev", "uiux", "communication"]
+    },
+    {
+        "name": "Emma Brown",
+        "profile": "https://example.com/images/emma-brown.jpg",
+        "muid": "emma@mulearn",
+        "roles": ["research", "management"]
+    },
+    {
+        "name": "Michael Davis",
+        "profile": "https://example.com/images/michael-davis.jpg",
+        "muid": "michael@mulearn",
+        "roles": ["uiux"]
+    },
+    {
+        "name": "Sarah Miller",
+        "profile": "https://example.com/images/sarah-miller.jpg",
+        "muid": "sarah@mulearn",
+        "roles": ["dev", "research", "communication"]
+    },
+    {
+        "name": "Daniel Wilson",
+        "profile": "https://example.com/images/daniel-wilson.jpg",
+        "muid": "daniel@mulearn",
+        "roles": ["management", "uiux"]
+    },
+    {
+        "name": "Laura Martinez",
+        "profile": "https://example.com/images/laura-martinez.jpg",
+        "muid": "laura@mulearn",
+        "roles": ["dev"]
+    },
+    {
+        "name": "Ryan Anderson",
+        "profile": "https://example.com/images/ryan-anderson.jpg",
+        "muid": "ryan@mulearn",
+        "roles": ["uiux", "research", "communication"]
+    },
+    {
+        "name": "Chloe Lee",
+        "profile": "https://example.com/images/chloe-lee.jpg",
+        "muid": "chloe@mulearn",
+        "roles": ["management", "dev"]
+    }
+]
