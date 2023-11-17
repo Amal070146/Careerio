@@ -16,20 +16,43 @@ export const Navbar = (props: Props) => {
       <div className={styles.TopSection}>
         <LogoSVG />
         <div>
-          <Link to="/">
-            <DashboardLogo colors="#4318FF" />
-            Dashboard
+          <Link to="/" className={styles.activeNav}>
+            <div>
+              <DashboardLogo colors="#4318FF" />
+              Dashboard
+            </div>
+            <div className={styles.RectangleBox} ></div>
           </Link>
-          <Link to="/searchengine">
-            <SearchEngineIcons colors={"#A3AED0"} />
-            Search Engine
+          <Link to="/searchengine" className={styles.inactiveNav}>
+            <div>
+              <SearchEngineIcons colors={"#A3AED0"} />
+              Search Engine
+            </div>
+            <div
+              className={styles.RectangleBox}
+              style={{ backgroundColor: "#A3AED0" }}
+            ></div>
           </Link>
-          <Link to="/posgigs">
-            <PostGigsIcons colors={"#A3AED0"} /> Post Gigs
+          <Link to="/posgigs" className={styles.inactiveNav}>
+            <div>
+              <PostGigsIcons colors={"#A3AED0"} /> Post Gigs
+            </div>
+            <div
+              className={styles.RectangleBox}
+              style={{ backgroundColor: "#A3AED0" }}
+            ></div>
           </Link>
-          <Link to="/exporeprojects">
-            <ProjectsIcons colors={"#A3AED0"} />
-            Explore Projects
+          <Link to="/exporeprojects" className={styles.inactiveNav}>
+            <div>
+              <ProjectsIcons colors={"#A3AED0"} />
+              Explore Projects
+            </div>
+            <div
+              className={styles.RectangleBox}
+              style={{ backgroundColor: "#A3AED0" }}
+            >
+              {" "}
+            </div>
           </Link>
         </div>
       </div>
