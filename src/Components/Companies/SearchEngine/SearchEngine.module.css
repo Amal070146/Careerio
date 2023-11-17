@@ -29,6 +29,7 @@
   border-radius: 20px;
   background-color: white;
   height: 100%;
+  color: black;
 }
 
 .SearchBarWrapper .InputWrapper button {

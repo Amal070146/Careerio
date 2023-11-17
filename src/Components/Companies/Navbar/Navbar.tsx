@@ -2,61 +2,131 @@ import { Link } from "react-router-dom";
 import styles from "./Navbar.module.css";
 import { LogoSVG } from "../../../assets/svg";
 import {
-  DashboardLogo,
-  PostGigsIcons,
-  ProjectsIcons,
-  SearchEngineIcons,
+    DashboardLogo,
+    PostGigsIcons,
+    ProjectsIcons,
+    SearchEngineIcons,
 } from "../../../assets/DashboardIcons";
+import { useState } from "react";
 
 type Props = {};
 
 export const Navbar = (_props: Props) => {
-  return (
-    <div className={styles.NavbarWrapper}>
-      <div className={styles.TopSection}>
-        <LogoSVG />
-        <div>
-          <Link to="/" className={styles.activeNav}>
-            <div>
-              <DashboardLogo colors="#4318FF" />
-              Dashboard
+	const [selectedNav, setSelectedNav] = useState(0)
+    return (
+        <div className={styles.NavbarWrapper}>
+            <div className={styles.TopSection}>
+                <LogoSVG />
+                <div>
+                    <Link
+                        to="/"
+                        className={
+                            selectedNav === 0
+                                ? styles.activeNav
+                                : styles.inactiveNav
+                        }
+                        onClick={() => setSelectedNav(0)}
+                    >
+                        <div>
+                            <DashboardLogo
+                                colors={`${
+                                    selectedNav === 0 ? "#4318FF" : "#A3AED0"
+                                }`}
+                            />
+                            Dashboard
+                        </div>
+                        <div
+                            className={styles.RectangleBox}
+                            style={{
+                                backgroundColor: `${
+                                    selectedNav === 0 ? "#4318FF" : "#A3AED0"
+                                }`,
+                            }}
+                        ></div>
+                    </Link>
+                    <Link
+                        to="/searchengine"
+                        className={
+                            selectedNav === 1
+                                ? styles.activeNav
+                                : styles.inactiveNav
+                        }
+                        onClick={() => setSelectedNav(1)}
+                    >
+                        <div>
+                            <SearchEngineIcons
+                                colors={`${
+                                    selectedNav === 1 ? "#4318FF" : "#A3AED0"
+                                }`}
+                            />
+                            Search Engine
+                        </div>
+                        <div
+                            className={styles.RectangleBox}
+                            style={{
+                                backgroundColor: `${
+                                    selectedNav === 1 ? "#4318FF" : "#A3AED0"
+                                }`,
+                            }}
+                        ></div>
+                    </Link>
+                    <Link
+                        to="/postgigs"
+                        className={
+                            selectedNav === 2
+                                ? styles.activeNav
+                                : styles.inactiveNav
+                        }
+                        onClick={() => setSelectedNav(2)}
+                    >
+                        <div>
+                            <PostGigsIcons
+                                colors={`${
+                                    selectedNav === 2 ? "#4318FF" : "#A3AED0"
+                                }`}
+                            />{" "}
+                            Post Gigs
+                        </div>
+                        <div
+                            className={styles.RectangleBox}
+                            style={{
+                                backgroundColor: `${
+                                    selectedNav === 2 ? "#4318FF" : "#A3AED0"
+                                }`,
+                            }}
+                        ></div>
+                    </Link>
+                    <Link
+                        to="/exploreprojects"
+                        className={
+                            selectedNav === 3
+                                ? styles.activeNav
+                                : styles.inactiveNav
+                        }
+                        onClick={() => setSelectedNav(3)}
+                    >
+                        <div>
+                            <ProjectsIcons
+                                colors={`${
+                                    selectedNav === 3 ? "#4318FF" : "#A3AED0"
+                                }`}
+                            />
+                            Explore Projects
+                        </div>
+                        <div
+                            className={styles.RectangleBox}
+                            style={{
+                                backgroundColor: `${
+                                    selectedNav === 3 ? "#4318FF" : "#A3AED0"
+                                }`,
+                            }}
+                        >
+                            {" "}
+                        </div>
+                    </Link>
+                </div>
             </div>
-            <div className={styles.RectangleBox} ></div>
-          </Link>
-          <Link to="/searchengine" className={styles.inactiveNav}>
-            <div>
-              <SearchEngineIcons colors={"#A3AED0"} />
-              Search Engine
-            </div>
-            <div
-              className={styles.RectangleBox}
-              style={{ backgroundColor: "#A3AED0" }}
-            ></div>
-          </Link>
-          <Link to="/postgigs" className={styles.inactiveNav}>
-            <div>
-              <PostGigsIcons colors={"#A3AED0"} /> Post Gigs
-            </div>
-            <div
-              className={styles.RectangleBox}
-              style={{ backgroundColor: "#A3AED0" }}
-            ></div>
-          </Link>
-          <Link to="/exporeprojects" className={styles.inactiveNav}>
-            <div>
-              <ProjectsIcons colors={"#A3AED0"} />
-              Explore Projects
-            </div>
-            <div
-              className={styles.RectangleBox}
-              style={{ backgroundColor: "#A3AED0" }}
-            >
-              {" "}
-            </div>
-          </Link>
+            <button>Log Out</button>
         </div>
-      </div>
-      <button>Log Out</button>
-    </div>
-  );
+    );
 };
