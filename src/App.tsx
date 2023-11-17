@@ -7,21 +7,20 @@ import { PostGigs } from "./Components/Companies/PostGigs/PostGigs";
 import { SearchEngine } from "./Components/Companies/SearchEngine/SearchEngine";
 
 function App() {
-  const router = createBrowserRouter([
-    {
-      path: "/",
-      element: <HeroSection children={undefined} />,
-      children: [
-        { path: "/", element: <Dashboard /> },
-        { path: "searchengine", element: <SearchEngine /> },
-        { path: "posgigs", element: <PostGigs /> },
-        { path: "exporeprojects", element: <ExploreProjects /> },
-     
-      ],
-    },
-  ]);
+    const router = createBrowserRouter([
+        {
+            path: "/",
+            element: <HeroSection children={undefined} />,
+            children: [
+                { path: "/", element: <Dashboard /> },
+                { path: "searchengine", element: <SearchEngine /> },
+                { path: "posgigs", element: <PostGigs /> },
+                { path: "exporeprojects", element: <ExploreProjects /> },
+            ],
+        },
+    ]);
 
-  return <RouterProvider router={router} />;
+    return <RouterProvider router={router} />;
 }
 
 export default App;
