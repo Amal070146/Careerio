@@ -6,19 +6,25 @@ import { HeroSection } from "./Components/Companies/HeroSection/HeroSection";
 import { PostGigs } from "./Components/Companies/PostGigs/PostGigs";
 import { SearchEngine } from "./Components/Companies/SearchEngine/SearchEngine";
 
+import { Register } from "./Components/Register/Register";
+
 function App() {
-    const router = createBrowserRouter([
-        {
-            path: "/",
-            element: <HeroSection children={undefined} />,
-            children: [
-                { path: "/", element: <Dashboard /> },
-                { path: "searchengine", element: <SearchEngine /> },
-                { path: "posgigs", element: <PostGigs /> },
-                { path: "exporeprojects", element: <ExploreProjects /> },
-            ],
-        },
-    ]);
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <HeroSection children={undefined} />,
+      children: [
+        { path: "/", element: <Dashboard /> },
+        { path: "searchengine", element: <SearchEngine /> },
+        { path: "postgigs", element: <PostGigs /> },
+        { path: "exploreprojects", element: <ExploreProjects /> },
+      ],
+    },
+    {
+      path: "register",
+      element: <Register />,
+    },
+  ]);
 
     return <RouterProvider router={router} />;
 }
