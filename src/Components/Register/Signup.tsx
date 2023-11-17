@@ -1,8 +1,7 @@
-import React from 'react'
 
 type Props = {}
 
-export const Signup = (props: Props) => {
+export const Signup = (_props: Props) => {
   return (
     <div>Signup</div>
   )

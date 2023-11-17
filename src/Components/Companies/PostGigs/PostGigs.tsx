@@ -1,8 +1,7 @@
-import React from 'react'
 
 type Props = {}
 
-export const PostGigs = (props: Props) => {
+export const PostGigs = (_props: Props) => {
   return (
     <div>PostGigs</div>
   )

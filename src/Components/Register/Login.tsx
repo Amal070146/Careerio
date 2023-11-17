@@ -1,8 +1,7 @@
-import React from 'react'
 
 type Props = {}
 
-export const Login = (props: Props) => {
+export const Login = (_props: Props) => {
   return (
     <div>Login</div>
   )

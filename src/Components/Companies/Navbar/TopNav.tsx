@@ -3,7 +3,7 @@ import styles from "./Navbar.module.css";
 import defaultProfile from '../../../assets/defaultProfile.png'
 type Props = {};
 
-export const TopNav = (props: Props) => {
+export const TopNav = (_props: Props) => {
   return (
     <div className={styles.TopNAvbarWrapper}>
       <div>

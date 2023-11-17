@@ -1,8 +1,7 @@
-import React from 'react'
 
 type Props = {}
 
-export const Dashboard = (props: Props) => {
+export const Dashboard = (_props: Props) => {
   return (
     <div>Dashboard</div>
   )

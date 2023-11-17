@@ -10,7 +10,7 @@ import {
 
 type Props = {};
 
-export const Navbar = (props: Props) => {
+export const Navbar = (_props: Props) => {
   return (
     <div className={styles.NavbarWrapper}>
       <div className={styles.TopSection}>

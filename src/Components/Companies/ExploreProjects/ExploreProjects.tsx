@@ -1,8 +1,7 @@
-import React from 'react'
 
 type Props = {}
 
-export const ExploreProjects = (props: Props) => {
+export const ExploreProjects = (_props: Props) => {
   return (
     <div>ExploreProjects</div>
   )
