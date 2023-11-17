@@ -33,7 +33,7 @@ export const Navbar = (_props: Props) => {
               style={{ backgroundColor: "#A3AED0" }}
             ></div>
           </Link>
-          <Link to="/posgigs" className={styles.inactiveNav}>
+          <Link to="/postgigs" className={styles.inactiveNav}>
             <div>
               <PostGigsIcons colors={"#A3AED0"} /> Post Gigs
             </div>

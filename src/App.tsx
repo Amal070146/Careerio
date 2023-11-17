@@ -7,6 +7,7 @@ import { PostGigs } from "./Components/Companies/PostGigs/PostGigs";
 import { SearchEngine } from "./Components/Companies/SearchEngine/SearchEngine";
 
 import { Register } from "./Components/Register/Register";
+import { FormPostGigs } from "./Components/Companies/PostGigs/FormPostGigs";
 
 function App() {
   const router = createBrowserRouter([
@@ -18,6 +19,7 @@ function App() {
         { path: "searchengine", element: <SearchEngine /> },
         { path: "postgigs", element: <PostGigs /> },
         { path: "exploreprojects", element: <ExploreProjects /> },
+        { path: "formpostgig", element: <FormPostGigs /> },
       ],
     },
     {
