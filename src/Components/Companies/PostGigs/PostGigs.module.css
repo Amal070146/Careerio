@@ -50,3 +50,29 @@
 
 
 
+/* PostGigWorkWrapper */
+
+
+.PostGigWorkWrapper{
+    display: flex;
+    height: calc(100% - 100px);
+    overflow-y: scroll;
+    flex-direction: column;
+    
+}
+
+.PostGigWorkWrapper .HeaderSection2{
+    display: flex;
+    background: url('./assets//GigCard.png')center center/cover no-repeat;
+    border-radius: 20px;
+    padding: 20PX;
+    gap: 15px;
+    color: white;
+}
+
+.PostGigWorkWrapper .HeaderSection2 button{
+    background-color: white;
+    color: #4318FF;
+    padding: 10px 20px;
+    border-radius: 20px;
+}
