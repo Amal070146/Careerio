@@ -1,0 +1,125 @@
+.DashboardWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+.DashboardWrapper .LeftSession {
+  width: 68%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.DashboardWrapper .LeftSession .TopSection {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.DashboardWrapper .LeftSession .TopSection .FirstDiv {
+  display: flex;
+  gap: 10px;
+  padding: 20px 30px;
+  border-radius: 20px;
+  background: var(
+    --gradients-gradient-style-1,
+    linear-gradient(135deg, #868cff 0%, #4318ff 100%)
+  );
+  color: white;
+  align-items: center;
+  text-align: center;
+  width: 48%;
+  justify-content: space-between;
+}
+.DashboardWrapper .LeftSession .TopSection .FirstDiv h1 {
+  font-size: 55px;
+}
+
+.DashboardWrapper .LeftSession .TopSection .SecondDiv {
+  display: flex;
+  gap: 10px;
+  padding: 20px 30px;
+  border-radius: 20px;
+
+  color: black;
+  align-items: center;
+  text-align: center;
+  width: 50%;
+  justify-content: space-between;
+  background-color: white;
+}
+
+.DashboardWrapper .LeftSession .BottomSection {
+  width: 100%;
+  background-color: white;
+  display: flex;
+  padding: 50px;
+  border-radius: 20px;
+}
+.DashboardWrapper .LeftSession .BottomSection > div {
+  width: 50%;
+}
+
+.DashboardWrapper .LeftSession .BottomSection .contentSession {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.DashboardWrapper .LeftSession .BottomSection .contentSession h2 {
+  font-size: 45px;
+  line-height: 1;
+}
+.DashboardWrapper .LeftSession .BottomSection .contentSession p {
+  font-size: 22px;
+  line-height: 1.3;
+  color: rgba(163, 174, 208, 1);
+}
+.DashboardWrapper .LeftSession .BottomSection .contentSession button {
+  width: fit-content;
+  padding: 15px 30px;
+  border-radius: 30px;
+  background: linear-gradient(
+    -82.33deg,
+    rgba(74, 36, 255, 1) 0%,
+    rgba(129, 131, 255, 1) 100%
+  );
+}
+.DashboardWrapper .LeftSession .BottomSection .imageConatiner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.DashboardWrapper .RightSession {
+  display: flex;
+  flex-direction: column;
+  width: 28%;
+  gap: 10px;
+}
+.DashboardWrapper .RightSession .InsiteSection {
+  display: flex;
+  gap: 10px;
+  padding: 20px 30px;
+  border-radius: 20px;
+
+  color: black;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  justify-content: space-between;
+  background-color: white;
+}
+
+.DashboardWrapper .RightSession .GraphConatiner {
+  background-color: white;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.DashboardWrapper .RightSession .GraphConatiner h1{
+    font-size: 25px;
+    padding: 25px;
+}
