@@ -1,10 +1,87 @@
 import { Link } from "react-router-dom";
 import styles from "./PostGigs.module.css";
-import { useState } from "react";
+import { JSXElementConstructor, ReactElement, ReactNode, ReactPortal, useState } from "react";
+import ey from "./assets/ey.png";
 type Props = {};
 
 export const PostGigs = (_props: Props) => {
   const [firstEntry, SetfirstEntry] = useState(false);
+
+  const data = [
+    {
+      image: ey,
+      name: "ey",
+      role: "UI/UX Designer",
+      description:
+        "We are looking for passionate designers with atleast 2+ experience in the same field, should have thorough understanding of Figma.",
+      stacks: ["UX Designer", "Figma", "Teamwork"],
+    },
+    {
+      image: ey,
+      name: "ey",
+      role: "UI/UX Designer",
+      description:
+        "We are looking for passionate designers with atleast 2+ experience in the same field, should have thorough understanding of Figma.",
+      stacks: ["UX Designer", "Figma", "Teamwork"],
+    },
+    {
+      image: ey,
+      name: "ey",
+      role: "UI/UX Designer",
+      description:
+        "We are looking for passionate designers with atleast 2+ experience in the same field, should have thorough understanding of Figma.",
+      stacks: ["UX Designer", "Figma", "Teamwork"],
+    },
+    {
+      image: ey,
+      name: "ey",
+      role: "UI/UX Designer",
+      description:
+        "We are looking for passionate designers with atleast 2+ experience in the same field, should have thorough understanding of Figma.",
+      stacks: ["UX Designer", "Figma", "Teamwork"],
+    },
+    {
+      image: ey,
+      name: "ey",
+      role: "UI/UX Designer",
+      description:
+        "We are looking for passionate designers with atleast 2+ experience in the same field, should have thorough understanding of Figma.",
+      stacks: ["UX Designer", "Figma", "Teamwork"],
+    },
+    {
+      image: ey,
+      name: "ey",
+      role: "UI/UX Designer",
+      description:
+        "We are looking for passionate designers with atleast 2+ experience in the same field, should have thorough understanding of Figma.",
+      stacks: ["UX Designer", "Figma", "Teamwork"],
+    },
+    {
+      image: ey,
+      name: "ey",
+      role: "UI/UX Designer",
+      description:
+        "We are looking for passionate designers with atleast 2+ experience in the same field, should have thorough understanding of Figma.",
+      stacks: ["UX Designer", "Figma", "Teamwork"],
+    },
+    {
+      image: ey,
+      name: "ey",
+      role: "UI/UX Designer",
+      description:
+        "We are looking for passionate designers with atleast 2+ experience in the same field, should have thorough understanding of Figma.",
+      stacks: ["UX Designer", "Figma", "Teamwork"],
+    },
+    {
+      image: ey,
+      name: "ey",
+      role: "UI/UX Designer",
+      description:
+        "We are looking for passionate designers with atleast 2+ experience in the same field, should have thorough understanding of Figma.",
+      stacks: ["UX Designer", "Figma", "Teamwork"],
+    },
+  ];
+
   return (
     <>
       {firstEntry ? (
@@ -23,17 +100,53 @@ export const PostGigs = (_props: Props) => {
           </div>
         </div>
       ) : (
-        <div>
-          <div>
+        <div className={styles.PostGigWorkWrapper}>
+          <div className={styles.HeaderSection2}>
             <div>
               {" "}
               <DrumsIcon colors="#fff" width={150} height={150} />
             </div>
             <div>
-              <h1></h1>
+              <h1>Get your work done with Gigs!</h1>
+              <p>
+                Are you a company seeking the top talents? Look no further! We
+                are your trusted partner for gig work postings, connecting you
+                with the best freelancers, contractors, and gig workers in the
+                industry. Partner with us today and experience the difference in
+                gig work postings.
+              </p>
+              <button>Post a Gig!</button>
             </div>
           </div>
-          <div></div>
+          <div>
+            <h1>Currently available gigs</h1>
+            <div className={styles.DataBlockWrapper}>
+              {data.map(({ name, image, role, description,stacks }) => (
+                <div className={styles.IndividualWrapper}>
+                  <div>
+                    <img src={image} alt="" />
+                    <p>{name}</p>
+                  </div>
+                  <div>
+                    <h1>{role}</h1>
+                    <p>
+                     {description}
+                    </p>
+                    <div>
+                      {stacks.map((stacks, index: any) => (
+                        <p key={index}>{stacks}</p>
+                      ))}
+                    </div>
+                  </div>
+                  <div>
+                    <p>Upto</p>
+                    <h1>20K</h1>
+                    <p>INR</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       )}
     </>
@@ -42,11 +155,11 @@ export const PostGigs = (_props: Props) => {
 
 type DrumsIconProps = {
   colors: string;
-  width:number;
-  height:number;
+  width: number;
+  height: number;
 };
 
-export const DrumsIcon = ({ colors,width,height }: DrumsIconProps) => {
+export const DrumsIcon = ({ colors, width, height }: DrumsIconProps) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
