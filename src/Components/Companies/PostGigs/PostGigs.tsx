@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import styles from "./PostGigs.module.css";
-import { JSXElementConstructor, ReactElement, ReactNode, ReactPortal, useState } from "react";
+import {  useState } from "react";
 import ey from "./assets/ey.png";
 type Props = {};
 
@@ -62,7 +62,7 @@ export const PostGigs = (_props: Props) => {
       role: "UI/UX Designer",
       description:
         "We are looking for passionate designers with atleast 2+ experience in the same field, should have thorough understanding of Figma.",
-      stacks: ["UX Designer", "Figma", "Teamwork"],
+      stacks: ["UX Designer", "Figma", "Teamwork","some"],
     },
     {
       image: ey,
@@ -106,7 +106,7 @@ export const PostGigs = (_props: Props) => {
               {" "}
               <DrumsIcon colors="#fff" width={150} height={150} />
             </div>
-            <div>
+            <div className={styles.ContentSession}>
               <h1>Get your work done with Gigs!</h1>
               <p>
                 Are you a company seeking the top talents? Look no further! We
@@ -115,30 +115,28 @@ export const PostGigs = (_props: Props) => {
                 industry. Partner with us today and experience the difference in
                 gig work postings.
               </p>
-              <button>Post a Gig!</button>
+              <Link to="/formpostgig">Post a Gig!</Link>
             </div>
           </div>
-          <div>
+          <div className={styles.AvailableGigsWrapper}>
             <h1>Currently available gigs</h1>
             <div className={styles.DataBlockWrapper}>
-              {data.map(({ name, image, role, description,stacks }) => (
+              {data.map(({ name, image, role, description, stacks }) => (
                 <div className={styles.IndividualWrapper}>
-                  <div>
+                  <div className={styles.firstDiv}>
                     <img src={image} alt="" />
                     <p>{name}</p>
                   </div>
-                  <div>
+                  <div className={styles.SecondDiv}>
                     <h1>{role}</h1>
-                    <p>
-                     {description}
-                    </p>
-                    <div>
+                    <p>{description}</p>
+                    <div className={styles.StacksWrapper}>
                       {stacks.map((stacks, index: any) => (
                         <p key={index}>{stacks}</p>
                       ))}
                     </div>
                   </div>
-                  <div>
+                  <div className={styles.ThirdDiv}>
                     <p>Upto</p>
                     <h1>20K</h1>
                     <p>INR</p>
