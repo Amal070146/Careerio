@@ -8,20 +8,41 @@
   overflow-y: scroll;
 }
 
-.ExploreProjectsWrapper .IndividualWrapper {
+.ExploreProjectsWrapper .HeaderSection2 {
+  display: flex;
+  background: url("../PostGigs/assets/GigCard.png") center center/cover no-repeat;
+  border-radius: 20px;
+  padding: 20px;
+  gap: 25px;
+  color: white;
+}
+.ExploreProjectsWrapper .HeaderSection2 .ContentSession {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.ExploreProjectsWrapper .HeaderSection2 a {
+  background-color: white;
+  color: #4318ff;
+  padding: 10px 20px;
+  border-radius: 20px;
+  width: fit-content;
+}
+
+.IndividualWrapper {
   width: calc(100% / 3.2);
   border-radius: 20px;
   background-color: white;
   cursor: pointer;
 }
 
-.ExploreProjectsWrapper .IndividualWrapper img {
+.IndividualWrapper img {
   width: 40px;
   height: 40px;
   border-radius: 50%;
 }
 
-.ExploreProjectsWrapper .IndividualWrapper .FirstSec {
+.IndividualWrapper .FirstSec {
   background: var(
     --button-hover,
     linear-gradient(
@@ -40,7 +61,7 @@
   color: white;
 }
 
-.ExploreProjectsWrapper .IndividualWrapper .SecondDiv {
+.IndividualWrapper .SecondDiv {
   padding: 20px;
   display: flex;
   gap: 10px;
@@ -48,26 +69,26 @@
   margin-top: -30px;
 }
 
-.ExploreProjectsWrapper .IndividualWrapper .SecondDiv p {
+.IndividualWrapper .SecondDiv p {
   background-color: #ece7ff;
   padding: 5px 10px;
   border-radius: 20px;
   font-size: 14px;
 }
 
-.ExploreProjectsWrapper .IndividualWrapper .ThirdDiv {
+.IndividualWrapper .ThirdDiv {
   padding: 20px;
   margin-top: -30px;
   display: flex;
   flex-direction: column;
   gap: 15px;
 }
-.ExploreProjectsWrapper .IndividualWrapper .ThirdDiv p{
+.IndividualWrapper .ThirdDiv p{
     font-size: 14px;
     line-height: 1.1;
 }
 
-.ExploreProjectsWrapper .IndividualWrapper .ThirdDiv .collaborators{
+.IndividualWrapper .ThirdDiv .collaborators{
     display: flex;
     gap: 10px;
 }
