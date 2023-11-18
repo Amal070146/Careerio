@@ -10,6 +10,7 @@ import { Register } from "./Components/Register/Register";
 import { FormPostGigs } from "./Components/Companies/PostGigs/FormPostGigs";
 import { Project } from "./Components/Companies/ExploreProjects/Project";
 import Profile from "./Components/Companies/Profile/Profile";
+import Notify from "./Components/notification/Notify";
 
 function App() {
     const router = createBrowserRouter([
@@ -24,6 +25,7 @@ function App() {
                 { path: "formpostgig", element: <FormPostGigs /> },
                 { path: "profile/:id", element: <Profile /> },
                 { path: "project/:id", element: <Project /> },
+                { path: "notification/:id", element: <Notify /> }, 
             ],
         },
         {
