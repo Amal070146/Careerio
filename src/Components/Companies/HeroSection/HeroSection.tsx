@@ -1,24 +1,32 @@
-import  { ReactNode } from "react";
-import { Outlet } from "react-router-dom";
+import { Outlet, useNavigate } from "react-router-dom";
 import { Navbar } from "../Navbar/Navbar";
 import { TopNav } from "../Navbar/TopNav";
 import styles from "./HeroSection.module.css";
+import { useEffect } from "react";
 
-type Props = {
-  children: ReactNode;
-};
+export const HeroSection = () => {
+	const navigate = useNavigate();
 
-export const HeroSection = (_props: Props) => {
-  return (
-    <div className={styles.HeroSectionWrapper}>
-      <div className={styles.SideNavbarWrapper}>
-        <Navbar />
-      </div>
-      <div className={styles.RightSectionWrapper}>
-        <TopNav />
+    useEffect(() => {
+        const accessToken = localStorage.getItem("accessToken");
 
-        <Outlet />
-      </div>
-    </div>
-  );
+        // Check if there's no access token.
+        if (!accessToken) {
+            navigate("/login");
+            return;
+        }
+        
+    }, [navigate]);
+
+    return (
+        <div className={styles.HeroSectionWrapper}>
+            <div className={styles.SideNavbarWrapper}>
+                <Navbar />
+            </div>
+            <div className={styles.RightSectionWrapper}>
+                <TopNav />
+                <Outlet />
+            </div>
+        </div>
+    );
 };

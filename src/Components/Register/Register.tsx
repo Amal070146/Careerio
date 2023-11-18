@@ -6,20 +6,20 @@ import { Login } from "./Login";
 type Props = {};
 
 export const Register = (_props: Props) => {
-  const [registerval, Setregisterval] = useState(true);
+    const [registerval, Setregisterval] = useState(true);
 
-  return (
-    <div className={styles.RegistrationWrapper}>
-      <div>
-        {registerval ? (
-          <Signup setval={Setregisterval} />
-        ) : (
-          <Login setval={Setregisterval} />
-        )}
-      </div>
-      <div className={styles.ImageContainer}>
-        <img src={image} alt="" />
-      </div>
-    </div>
-  );
+    return (
+        <div className={styles.RegistrationWrapper}>
+            <div>
+                {registerval ? (
+                    <Signup setval={Setregisterval} />
+                ) : (
+                    <Login setval={Setregisterval} />
+                )}
+            </div>
+            <div className={styles.ImageContainer}>
+                <img src={image} alt="" />
+            </div>
+        </div>
+    );
 };

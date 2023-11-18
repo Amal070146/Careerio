@@ -5,7 +5,6 @@ import { ExploreProjects } from "./Components/Companies/ExploreProjects/ExploreP
 import { HeroSection } from "./Components/Companies/HeroSection/HeroSection";
 import { PostGigs } from "./Components/Companies/PostGigs/PostGigs";
 import { SearchEngine } from "./Components/Companies/SearchEngine/SearchEngine";
-
 import { Register } from "./Components/Register/Register";
 import { FormPostGigs } from "./Components/Companies/PostGigs/FormPostGigs";
 import { Project } from "./Components/Companies/ExploreProjects/Project";
@@ -17,7 +16,7 @@ function App() {
     const router = createBrowserRouter([
         {
             path: "/",
-            element: <HeroSection children={undefined} />,
+            element: <HeroSection />,
             children: [
                 { path: "/", element: <Dashboard /> },
                 { path: "searchengine", element: <SearchEngine /> },
