@@ -1,89 +1,27 @@
 import { Link } from "react-router-dom";
 import styles from "./PostGigs.module.css";
-import { useState } from "react";
-import ey from "./assets/ey.png";
-type Props = {};
+import { useEffect, useState } from "react";
 
-export const PostGigs = (_props: Props) => {
+interface Profile {
+    image: string;
+    name: string;
+    role: string;
+    description: string;
+    stacks: string[];
+}
 
-  const data = [
-    {
-      image: ey,
-      name: "ey",
-      role: "UI/UX Designer",
-      description:
-        "We are looking for passionate designers with atleast 2+ experience in the same field, should have thorough understanding of Figma.",
-      stacks: ["UX Designer", "Figma", "Teamwork"],
-    },
-    {
-      image: ey,
-      name: "ey",
-      role: "UI/UX Designer",
-      description:
-        "We are looking for passionate designers with atleast 2+ experience in the same field, should have thorough understanding of Figma.",
-      stacks: ["UX Designer", "Figma", "Teamwork"],
-    },
-    {
-      image: ey,
-      name: "ey",
-      role: "UI/UX Designer",
-      description:
-        "We are looking for passionate designers with atleast 2+ experience in the same field, should have thorough understanding of Figma.",
-      stacks: ["UX Designer", "Figma", "Teamwork"],
-    },
-    {
-      image: ey,
-      name: "ey",
-      role: "UI/UX Designer",
-      description:
-        "We are looking for passionate designers with atleast 2+ experience in the same field, should have thorough understanding of Figma.",
-      stacks: ["UX Designer", "Figma", "Teamwork"],
-    },
-    {
-      image: ey,
-      name: "ey",
-      role: "UI/UX Designer",
-      description:
-        "We are looking for passionate designers with atleast 2+ experience in the same field, should have thorough understanding of Figma.",
-      stacks: ["UX Designer", "Figma", "Teamwork"],
-    },
-    {
-      image: ey,
-      name: "ey",
-      role: "UI/UX Designer",
-      description:
-        "We are looking for passionate designers with atleast 2+ experience in the same field, should have thorough understanding of Figma.",
-      stacks: ["UX Designer", "Figma", "Teamwork"],
-    },
-    {
-      image: ey,
-      name: "ey",
-      role: "UI/UX Designer",
-      description:
-        "We are looking for passionate designers with atleast 2+ experience in the same field, should have thorough understanding of Figma.",
-      stacks: ["UX Designer", "Figma", "Teamwork", "some"],
-    },
-    {
-      image: ey,
-      name: "ey",
-      role: "UI/UX Designer",
-      description:
-        "We are looking for passionate designers with atleast 2+ experience in the same field, should have thorough understanding of Figma.",
-      stacks: ["UX Designer", "Figma", "Teamwork"],
-    },
-    {
-      image: ey,
-      name: "ey",
-      role: "UI/UX Designer",
-      description:
-        "We are looking for passionate designers with atleast 2+ experience in the same field, should have thorough understanding of Figma.",
-      stacks: ["UX Designer", "Figma", "Teamwork"],
-    },
-  ];
-
+export const PostGigs = () => {
+	const [data, setData] = useState<Profile[]>([])
+	
+	useEffect(() => {
+        // Retrieve the item from local storage and provide a fallback empty array string if null
+        const gigData = localStorage.getItem("gigData") || "[]";
+        setData(JSON.parse(gigData));
+    }, []);
+	
     return (
         <>
-            {firstEntry ? (
+            {!data ? (
                 <div className={styles.PostGigWrapper}>
                     <div className={styles.InnerConatiner}>
                         <DrumsIcon colors="#4318FF" width={50} height={50} />

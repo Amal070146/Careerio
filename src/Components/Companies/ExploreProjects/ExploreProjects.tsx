@@ -1,5 +1,6 @@
 import styles from "./ExploreProjects.module.css";
 import ey from "../PostGigs/assets/ey.png";
+import { useNavigate } from "react-router-dom";
 
 type Props = {};
 
@@ -77,11 +78,11 @@ export const ExploreProjects = (_props: Props) => {
     },
     // ... more data items if needed
   ];
-
+  const navigate = useNavigate()
   return (
     <div className={styles.ExploreProjectsWrapper}>
       {data.map(({ name, title, description, stacks, collabs }, index) => (
-        <div key={index} className={styles.IndividualWrapper}>
+        <div key={index} className={styles.IndividualWrapper} onClick={() => navigate(`/project/${name}`)}>
           <div className={styles.FirstSec}>
             <h1>{name}</h1>
             <p>projects</p>
