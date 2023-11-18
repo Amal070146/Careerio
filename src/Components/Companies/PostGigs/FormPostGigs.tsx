@@ -156,7 +156,7 @@ export const FormPostGigs = () => {
                             onClick={() => handleSkillSelect(skill)}
                             className={
                                 formData.skills.includes(skill)
-                                    ? "selected"
+                                    ? styles.selected
                                     : ""
                             }
                         >
