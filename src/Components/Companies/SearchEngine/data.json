@@ -1,67 +1,67 @@
 [
     {
         "name": "John Doe",
-        "profile": "https://example.com/images/john-doe.jpg",
+        "profile": "https://imgs.search.brave.com/NbITOffqy7rRYIZjY8xSzn-O2mF32p972xlQUoJLDkI/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9idXJz/dC5zaG9waWZ5Y2Ru/LmNvbS9waG90b3Mv/bGVuc2JhbGwteWVs/bG93LWFuZC1vcmFu/Z2UtbGlnaHRzLmpw/Zz93aWR0aD0xMDAw/JmZvcm1hdD1wanBn/JmV4aWY9MCZpcHRj/PTA",
         "muid": "john@mulearn",
         "roles": ["dev", "research"]
     },
     {
         "name": "Jane Smith",
-        "profile": "https://example.com/images/jane-smith.jpg",
+        "profile": "https://imgs.search.brave.com/NbITOffqy7rRYIZjY8xSzn-O2mF32p972xlQUoJLDkI/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9idXJz/dC5zaG9waWZ5Y2Ru/LmNvbS9waG90b3Mv/bGVuc2JhbGwteWVs/bG93LWFuZC1vcmFu/Z2UtbGlnaHRzLmpw/Zz93aWR0aD0xMDAw/JmZvcm1hdD1wanBn/JmV4aWY9MCZpcHRj/PTA",
         "muid": "jane@mulearn",
         "roles": ["uiux", "dev"]
     },
     {
         "name": "Alice Johnson",
-        "profile": "https://example.com/images/alice-johnson.jpg",
+        "profile": "https://imgs.search.brave.com/P8B-reWYvA4-0xIb4U1peLED56Vc9QaZcE1sqEd9uQ4/rs:fit:860:0:0/g:ce/aHR0cHM6Ly93d3cu/c3RvY2t2YXVsdC5u/ZXQvZGF0YS8yMDIw/LzAxLzMwLzI3Mjky/Ny90aHVtYjE2Lmpw/Zw",
         "muid": "alice@mulearn",
         "roles": ["communication", "management"]
     },
     {
         "name": "Bob Williams",
-        "profile": "https://example.com/images/bob-williams.jpg",
+        "profile": "https://imgs.search.brave.com/NbITOffqy7rRYIZjY8xSzn-O2mF32p972xlQUoJLDkI/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9idXJz/dC5zaG9waWZ5Y2Ru/LmNvbS9waG90b3Mv/bGVuc2JhbGwteWVs/bG93LWFuZC1vcmFu/Z2UtbGlnaHRzLmpw/Zz93aWR0aD0xMDAw/JmZvcm1hdD1wanBn/JmV4aWY9MCZpcHRj/PTA",
         "muid": "bob@mulearn",
         "roles": ["dev", "uiux", "communication"]
     },
     {
         "name": "Emma Brown",
-        "profile": "https://example.com/images/emma-brown.jpg",
+        "profile": "https://imgs.search.brave.com/P8B-reWYvA4-0xIb4U1peLED56Vc9QaZcE1sqEd9uQ4/rs:fit:860:0:0/g:ce/aHR0cHM6Ly93d3cu/c3RvY2t2YXVsdC5u/ZXQvZGF0YS8yMDIw/LzAxLzMwLzI3Mjky/Ny90aHVtYjE2Lmpw/Zw",
         "muid": "emma@mulearn",
         "roles": ["research", "management"]
     },
     {
         "name": "Michael Davis",
-        "profile": "https://example.com/images/michael-davis.jpg",
+        "profile": "https://imgs.search.brave.com/P8B-reWYvA4-0xIb4U1peLED56Vc9QaZcE1sqEd9uQ4/rs:fit:860:0:0/g:ce/aHR0cHM6Ly93d3cu/c3RvY2t2YXVsdC5u/ZXQvZGF0YS8yMDIw/LzAxLzMwLzI3Mjky/Ny90aHVtYjE2Lmpw/Zw",
         "muid": "michael@mulearn",
         "roles": ["uiux"]
     },
     {
         "name": "Sarah Miller",
-        "profile": "https://example.com/images/sarah-miller.jpg",
+        "profile": "https://imgs.search.brave.com/P8B-reWYvA4-0xIb4U1peLED56Vc9QaZcE1sqEd9uQ4/rs:fit:860:0:0/g:ce/aHR0cHM6Ly93d3cu/c3RvY2t2YXVsdC5u/ZXQvZGF0YS8yMDIw/LzAxLzMwLzI3Mjky/Ny90aHVtYjE2Lmpw/Zw",
         "muid": "sarah@mulearn",
         "roles": ["dev", "research", "communication"]
     },
     {
         "name": "Daniel Wilson",
-        "profile": "https://example.com/images/daniel-wilson.jpg",
+        "profile": "https://imgs.search.brave.com/2aqXI505QjcQdfESbILEKB-KxCizy-U7dz0BgOgWJ08/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9jZG4u/cGl4YWJheS5jb20v/cGhvdG8vMjAyMy8w/OS8xOC8yMC8wMS93/b21hbi04MjYxMzQy/XzY0MC5qcGc",
         "muid": "daniel@mulearn",
         "roles": ["management", "uiux"]
     },
     {
         "name": "Laura Martinez",
-        "profile": "https://example.com/images/laura-martinez.jpg",
+        "profile": "https://imgs.search.brave.com/2aqXI505QjcQdfESbILEKB-KxCizy-U7dz0BgOgWJ08/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9jZG4u/cGl4YWJheS5jb20v/cGhvdG8vMjAyMy8w/OS8xOC8yMC8wMS93/b21hbi04MjYxMzQy/XzY0MC5qcGc",
         "muid": "laura@mulearn",
         "roles": ["dev"]
     },
     {
         "name": "Ryan Anderson",
-        "profile": "https://example.com/images/ryan-anderson.jpg",
+        "profile": "https://imgs.search.brave.com/2aqXI505QjcQdfESbILEKB-KxCizy-U7dz0BgOgWJ08/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9jZG4u/cGl4YWJheS5jb20v/cGhvdG8vMjAyMy8w/OS8xOC8yMC8wMS93/b21hbi04MjYxMzQy/XzY0MC5qcGc",
         "muid": "ryan@mulearn",
         "roles": ["uiux", "research", "communication"]
     },
     {
         "name": "Chloe Lee",
-        "profile": "https://example.com/images/chloe-lee.jpg",
+        "profile": "https://imgs.search.brave.com/2aqXI505QjcQdfESbILEKB-KxCizy-U7dz0BgOgWJ08/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9jZG4u/cGl4YWJheS5jb20v/cGhvdG8vMjAyMy8w/OS8xOC8yMC8wMS93/b21hbi04MjYxMzQy/XzY0MC5qcGc",
         "muid": "chloe@mulearn",
         "roles": ["management", "dev"]
     }
