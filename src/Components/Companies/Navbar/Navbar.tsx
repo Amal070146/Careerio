@@ -9,9 +9,8 @@ import {
 } from "../../../assets/DashboardIcons";
 import { useState } from "react";
 
-type Props = {};
 
-export const Navbar = (_props: Props) => {
+export const Navbar = () => {
 	const [selectedNav, setSelectedNav] = useState(0)
     return (
         <div className={styles.NavbarWrapper}>

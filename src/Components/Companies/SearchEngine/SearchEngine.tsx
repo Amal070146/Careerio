@@ -54,6 +54,7 @@ export const SearchEngine = () => {
                     ))}
                 </div>
             </div>
+			<h2>Search by tech stack</h2>
             <div className={styles.SearchByStackWrapper}>
                 {stacks.map(({ name, image }) => (
                     <button className={styles.StackButton}>
