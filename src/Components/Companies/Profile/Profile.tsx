@@ -48,24 +48,34 @@ const Profile = () => {
 
   return (
     <div className={styles.ProfileWrapper}>
-      <div>
+      <div className={styles.Header}>
         <h2>Hi, I’m Sagar 👋</h2>
         <div>
-          <GithubLogos />
-          <StackoverFlowLogos />
-          <LinkedInLogos />
-          <BehanceLogos />
-          <FigmaLogos />
+          <a href="">
+            <GithubLogos />
+          </a>
+          <a href="">
+            <StackoverFlowLogos />
+          </a>
+          <a href="">
+            <LinkedInLogos />
+          </a>
+          <a href="">
+            <BehanceLogos />
+          </a>
+          <a href="">
+            <FigmaLogos />
+          </a>
         </div>
       </div>
-      <p>
+      <p className={styles.Description}>
         I'm a full stack developer (React.js & Node.js) with a focus on creating
         (and occasionally designing) exceptional digital experiences that are
         fast, accessible, visually appealing, and responsive. Even though I have
         been creating web applications for over 7 years, I still love it as if
         it was something new.
       </p>
-      <div>
+      <div className={styles.ContactDetailsWrapper}>
         <div>
           <div
             style={{ backgroundColor: "#10B981", width: "5px", height: "5px" }}
@@ -86,7 +96,7 @@ const Profile = () => {
           <p>reachsagarshah@gmail.com</p>
         </div>
       </div>
-      <div>
+      <div className={styles.skillsWrapper}>
         <h2>My Skills</h2>
         <div>
           <p>Python</p>
@@ -96,7 +106,7 @@ const Profile = () => {
         </div>
       </div>
 
-      <div>
+      <div className={styles.ExperienceWrapper}>
         <h2>My Experiences</h2>
         <div className={styles.MyExperienceContentWrapper}>
           <div className={styles.ExperienceIndividualWrapper}>
@@ -116,7 +126,7 @@ const Profile = () => {
           </div>
         </div>
       </div>
-      <div>
+      <div className={styles.ProjectWrapper}>
         <h3>My Projects</h3>
         <div>
           {" "}
