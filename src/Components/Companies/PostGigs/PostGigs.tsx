@@ -1,12 +1,13 @@
 import { Link } from "react-router-dom";
 import styles from "./PostGigs.module.css";
-import {  useState } from "react";
+import { useState } from "react";
 import ey from "./assets/ey.png";
 type Props = {};
 
 export const PostGigs = (_props: Props) => {
   const [firstEntry, SetfirstEntry] = useState(false);
 
+  SetfirstEntry(false);
   const data = [
     {
       image: ey,
@@ -62,7 +63,7 @@ export const PostGigs = (_props: Props) => {
       role: "UI/UX Designer",
       description:
         "We are looking for passionate designers with atleast 2+ experience in the same field, should have thorough understanding of Figma.",
-      stacks: ["UX Designer", "Figma", "Teamwork","some"],
+      stacks: ["UX Designer", "Figma", "Teamwork", "some"],
     },
     {
       image: ey,
