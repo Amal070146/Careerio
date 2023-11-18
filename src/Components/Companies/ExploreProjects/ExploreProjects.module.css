@@ -4,6 +4,8 @@
   gap: 10px;
   width: 100%;
   justify-content: center;
+  height: calc(100% - 100px);
+  overflow-y: scroll;
 }
 
 .ExploreProjectsWrapper .IndividualWrapper {
@@ -35,4 +37,36 @@
   align-items: center;
   justify-content: center;
   color: white;
+}
+
+.ExploreProjectsWrapper .IndividualWrapper .SecondDiv {
+  padding: 20px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: -30px;
+}
+
+.ExploreProjectsWrapper .IndividualWrapper .SecondDiv p {
+  background-color: #ece7ff;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 14px;
+}
+
+.ExploreProjectsWrapper .IndividualWrapper .ThirdDiv {
+  padding: 20px;
+  margin-top: -30px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.ExploreProjectsWrapper .IndividualWrapper .ThirdDiv p{
+    font-size: 14px;
+    line-height: 1.1;
+}
+
+.ExploreProjectsWrapper .IndividualWrapper .ThirdDiv .collaborators{
+    display: flex;
+    gap: 10px;
 }
