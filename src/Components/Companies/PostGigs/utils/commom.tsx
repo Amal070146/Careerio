@@ -1,3 +1,5 @@
+import toast from "react-hot-toast";
+
 export const defaultGigs: GigData[] = [
     {
         id: 1,
@@ -82,3 +84,9 @@ export const DrumsIcon = ({ colors, width, height }: DrumsIconProps) => {
         </svg>
     );
 };
+
+export const comingSoon = () => {
+	toast("Coming Soon!", {
+        icon: "🚧",
+    });
+}

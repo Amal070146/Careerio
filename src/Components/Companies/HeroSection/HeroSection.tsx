@@ -12,7 +12,7 @@ export const HeroSection = () => {
 
         // Check if there's no access token.
         if (!accessToken) {
-            navigate("/login");
+            navigate("/register");
             return;
         }
         

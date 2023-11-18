@@ -2,12 +2,16 @@ import { useState } from "react";
 import { LogoSVG } from "../../assets/svg";
 import styles from "./Register.module.css";
 import { loginUser } from "./RegisterApis";
+import toast from "react-hot-toast";
+import { useNavigate } from "react-router-dom";
+import { comingSoon } from "../Companies/PostGigs/utils/commom";
 
 type SignupProps = {
     setval: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
 export const Login = ({ setval }: SignupProps) => {
+	const navigate = useNavigate()
     // State to store form data
     const [loginData, setLoginData] = useState<LoginUserData>({
         email: "",
@@ -26,7 +30,14 @@ export const Login = ({ setval }: SignupProps) => {
     // Handle form submission
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
-        loginUser(loginData);
+        toast.promise(loginUser(loginData), {
+            loading: "Logging in...",
+            success: () => {
+                navigate("/"); 
+                return "Login Successful!";
+            },
+            error: "Login failed. Please try again.",
+        });
     };
 
     return (
@@ -73,11 +84,11 @@ export const Login = ({ setval }: SignupProps) => {
                     </button>
                 </div>
             </form>
-            <div className={styles.OtherLogins}>
+            <div className={styles.OtherLogins} onClick={comingSoon}>
                 <p>Or, Login with</p>
-                <a href="">Facebook</a>
-                <a href="">LinkedIn</a>
-                <a href="">Google</a>
+                <p>Facebook</p>
+                <p>LinkedIn</p>
+                <p>Google</p>
             </div>
         </div>
     );
