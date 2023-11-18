@@ -30,6 +30,7 @@
   background-color: white;
   height: 100%;
   color: black;
+  width: 100%;
 }
 
 .SearchBarWrapper .InputWrapper button {

@@ -1,11 +1,9 @@
 import styles from "./SearchEngine.module.css";
 
-import data from "./data.json"
+import data from "./data.json";
 import { DjangoLogo, MongoDBLogo, ReactLogo } from "./StackLogo";
 
 export const SearchEngine = () => {
-    
-
     const stacks = [
         {
             name: "MongoDB",
@@ -21,48 +19,48 @@ export const SearchEngine = () => {
         },
     ];
     return (
-      <div className={styles.SearchEngineWrapper}>
-        <div className={styles.SearchBarWrapper}>
-          <div className={styles.InputWrapper}>
-            <input type="text" placeholder="Search anything..." />
-            <button>
-              <FilterIcon />
-            </button>
-          </div>
-          <button>
-            <SearchIcon />
-          </button>
-        </div>
-        <div className={styles.SearchProfilesWrapper}>
-          <h1>Search By Profile</h1>
-          <div>
-            {data.slice(0,6).map(({ name, profile, muid, roles }) => (
-              <div key={muid} className={styles.ProfileCard}>
-                <div>
-                  <img src={profile} alt={`${name} profile`} />
-                  <div>
-                    <h2>{name}</h2>
-                    <p>{muid}</p>
-                  </div>
+        <div className={styles.SearchEngineWrapper}>
+            <div className={styles.SearchBarWrapper}>
+                <div className={styles.InputWrapper}>
+                    <input type="text" placeholder="Search anything..." />
+                    <button>
+                        <FilterIcon />
+                    </button>
                 </div>
-                <ul>
-                  {roles.map((role, index) => (
-                    <li key={index}>{role}</li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
+                <button>
+                    <SearchIcon />
+                </button>
+            </div>
+            <div className={styles.SearchProfilesWrapper}>
+                <h1>Search By Profile</h1>
+                <div>
+                    {data.slice(0,6).map(({ name, profile, muid, roles }) => (
+                        <div key={muid} className={styles.ProfileCard}>
+                            <div>
+                                <img src={profile} alt={`${name} profile`} />
+                                <div>
+                                    <h2>{name}</h2>
+                                    <p>{muid}</p>
+                                </div>
+                            </div>
+                            <ul>
+                                {roles.map((role, index) => (
+                                    <li key={index}>{role}</li>
+                                ))}
+                            </ul>
+                        </div>
+                    ))}
+                </div>
+            </div>
+            <div className={styles.SearchByStackWrapper}>
+                {stacks.map(({ name, image }) => (
+                    <button className={styles.StackButton}>
+                        {image}
+                        <p>{name}</p>
+                    </button>
+                ))}
+            </div>
         </div>
-        <div className={styles.SearchByStackWrapper}>
-          {stacks.map(({ name, image }) => (
-            <button className={styles.StackButton}>
-              {image}
-              <p>{name}</p>
-            </button>
-          ))}
-        </div>
-      </div>
     );
 };
 
