@@ -26,7 +26,7 @@ privateGateway.interceptors.request.use(
         // Check if the endpoint needs access token to be send
         if (
             config.url !== "register/" &&
-            config.url !== "login-muid/" &&
+            config.url !== "login/" &&
             config.url !== "forgot-password/" &&
             config.url !== "reset-password/"
         ) {
