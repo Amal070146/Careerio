@@ -1,78 +1,169 @@
-.PostGigWrapper{
-    width: 100%;
+.PostGigWrapper {
+  width: 100%;
   height: calc(100% - 120px);
-    display: grid;
-    place-items: center;
+  display: grid;
+  place-items: center;
 }
-.InnerConatiner{
-    width: fit-content;
-    height: fit-content;
-    padding: 30px;
-    border-radius: 20px;
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    gap: 25px;
+.InnerConatiner {
+  width: fit-content;
+  height: fit-content;
+  padding: 30px;
+  border-radius: 20px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
 }
-.PostGigWrapper a{
-    background-color: #4318FF;
-    width: fit-content;
-    padding: 10px 20px;
-    border-radius: 20px;
-    color: white;
-    border: 2px solid #4318FF;
-
+.PostGigWrapper a {
+  background-color: #4318ff;
+  width: fit-content;
+  padding: 10px 20px;
+  border-radius: 20px;
+  color: white;
+  border: 2px solid #4318ff;
 }
-.PostGigWrapper a:hover{
-    background-color: white;
-    color: #4318FF;
+.PostGigWrapper a:hover {
+  background-color: white;
+  color: #4318ff;
 }
-.contentWrapper{
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
+.contentWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
 }
 
-.contentWrapper h1{
-    font-size: 26px;
+.contentWrapper h1 {
+  font-size: 26px;
 }
 
-.contentWrapper p{
-    font-size: 20px;
-    color: #A3AED0;
-    text-align: center;
+.contentWrapper p {
+  font-size: 20px;
+  color: #a3aed0;
+  text-align: center;
 }
-
-
-
 
 /* PostGigWorkWrapper */
 
-
-.PostGigWorkWrapper{
-    display: flex;
-    height: calc(100% - 100px);
-    overflow-y: scroll;
-    flex-direction: column;
-    
+.PostGigWorkWrapper {
+  display: flex;
+  height: calc(100% - 100px);
+  overflow-y: scroll;
+  flex-direction: column;
+  gap: 30px;
 }
 
-.PostGigWorkWrapper .HeaderSection2{
-    display: flex;
-    background: url('./assets//GigCard.png')center center/cover no-repeat;
-    border-radius: 20px;
-    padding: 20PX;
-    gap: 15px;
-    color: white;
+.PostGigWorkWrapper .HeaderSection2 {
+  display: flex;
+  background: url("./assets//GigCard.png") center center/cover no-repeat;
+  border-radius: 20px;
+  padding: 20px;
+  gap: 25px;
+  color: white;
+}
+.PostGigWorkWrapper .HeaderSection2 .ContentSession {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.PostGigWorkWrapper .HeaderSection2 a {
+  background-color: white;
+  color: #4318ff;
+  padding: 10px 20px;
+  border-radius: 20px;
+  width: fit-content;
+}
+.AvailableGigsWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.AvailableGigsWrapper h1 {
+  font-size: 30px;
 }
 
-.PostGigWorkWrapper .HeaderSection2 button{
-    background-color: white;
-    color: #4318FF;
-    padding: 10px 20px;
-    border-radius: 20px;
+.AvailableGigsWrapper .DataBlockWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 10px;
+}
+
+.AvailableGigsWrapper .DataBlockWrapper .IndividualWrapper {
+  max-width: calc(100% / 3.1);
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  padding: 10px;
+  border-radius: 20px;
+  background-color: white;
+}
+
+.AvailableGigsWrapper .DataBlockWrapper .IndividualWrapper .firstDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.AvailableGigsWrapper .DataBlockWrapper .IndividualWrapper .firstDiv img {
+  width: 50px;
+  object-fit: contain;
+}
+.AvailableGigsWrapper .DataBlockWrapper .IndividualWrapper .firstDiv p {
+  text-transform: uppercase;
+  font-size: 16px;
+}
+.AvailableGigsWrapper .DataBlockWrapper .IndividualWrapper .SecondDiv {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.AvailableGigsWrapper .DataBlockWrapper .IndividualWrapper .SecondDiv h1 {
+  font-size: 22px;
+}
+.AvailableGigsWrapper .DataBlockWrapper .IndividualWrapper .SecondDiv p {
+  color: #a3aed0;
+  font-size: 13px;
+}
+
+.AvailableGigsWrapper
+  .DataBlockWrapper
+  .IndividualWrapper
+  .SecondDiv
+  .StacksWrapper {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.AvailableGigsWrapper
+  .DataBlockWrapper
+  .IndividualWrapper
+  .SecondDiv
+  .StacksWrapper
+  p {
+  color: #4c27ff;
+  background-color: #e3ddff;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 13px;
+}
+
+.AvailableGigsWrapper .DataBlockWrapper .IndividualWrapper .ThirdDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(
+    --button-hover,
+    linear-gradient(
+      -82.33deg,
+      rgba(74, 36, 255, 1) 0%,
+      rgba(129, 131, 255, 1) 100%
+    )
+  );
+  border-radius: 15px;
+  padding: 8px;
+  color: white;
 }
