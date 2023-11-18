@@ -9,6 +9,7 @@ import { SearchEngine } from "./Components/Companies/SearchEngine/SearchEngine";
 import { Register } from "./Components/Register/Register";
 import { FormPostGigs } from "./Components/Companies/PostGigs/FormPostGigs";
 import { Project } from "./Components/Companies/ExploreProjects/Project";
+import Profile from "./Components/Companies/Profile/Profile";
 
 function App() {
     const router = createBrowserRouter([
@@ -21,7 +22,7 @@ function App() {
                 { path: "postgigs", element: <PostGigs /> },
                 { path: "exploreprojects", element: <ExploreProjects /> },
                 { path: "formpostgig", element: <FormPostGigs /> },
-                { path: "profile/:id", element: <FormPostGigs /> },
+                { path: "profile/:id", element: <Profile /> },
                 { path: "project/:id", element: <Project /> },
             ],
         },
