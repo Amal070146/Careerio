@@ -7,7 +7,6 @@ type Props = {};
 export const PostGigs = (_props: Props) => {
   const [firstEntry, SetfirstEntry] = useState(false);
 
-  SetfirstEntry(false);
   const data = [
     {
       image: ey,
