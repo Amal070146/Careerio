@@ -12,7 +12,7 @@ export const TopNav = () => {
                 <h1>Welcome to Careerio!</h1>
             </div>
             <div className={styles.ButtonWrapper}>
-                <button>
+                <button onClick={() => navigate("/notification/1")}>
                     <Notificationsvg />
                 </button>
                 <button
