@@ -6,80 +6,80 @@ type Props = {};
 
 export const PostGigs = (_props: Props) => {
 
-    const data = [
-        {
-            image: ey,
-            name: "ey",
-            role: "UI/UX Designer",
-            description:
-                "We are looking for passionate designers with atleast 2+ experience in the same field, should have thorough understanding of Figma.",
-            stacks: ["UX Designer", "Figma", "Teamwork"],
-        },
-        {
-            image: ey,
-            name: "ey",
-            role: "UI/UX Designer",
-            description:
-                "We are looking for passionate designers with atleast 2+ experience in the same field, should have thorough understanding of Figma.",
-            stacks: ["UX Designer", "Figma", "Teamwork"],
-        },
-        {
-            image: ey,
-            name: "ey",
-            role: "UI/UX Designer",
-            description:
-                "We are looking for passionate designers with atleast 2+ experience in the same field, should have thorough understanding of Figma.",
-            stacks: ["UX Designer", "Figma", "Teamwork"],
-        },
-        {
-            image: ey,
-            name: "ey",
-            role: "UI/UX Designer",
-            description:
-                "We are looking for passionate designers with atleast 2+ experience in the same field, should have thorough understanding of Figma.",
-            stacks: ["UX Designer", "Figma", "Teamwork"],
-        },
-        {
-            image: ey,
-            name: "ey",
-            role: "UI/UX Designer",
-            description:
-                "We are looking for passionate designers with atleast 2+ experience in the same field, should have thorough understanding of Figma.",
-            stacks: ["UX Designer", "Figma", "Teamwork"],
-        },
-        {
-            image: ey,
-            name: "ey",
-            role: "UI/UX Designer",
-            description:
-                "We are looking for passionate designers with atleast 2+ experience in the same field, should have thorough understanding of Figma.",
-            stacks: ["UX Designer", "Figma", "Teamwork"],
-        },
-        {
-            image: ey,
-            name: "ey",
-            role: "UI/UX Designer",
-            description:
-                "We are looking for passionate designers with atleast 2+ experience in the same field, should have thorough understanding of Figma.",
-            stacks: ["UX Designer", "Figma", "Teamwork", "some"],
-        },
-        {
-            image: ey,
-            name: "ey",
-            role: "UI/UX Designer",
-            description:
-                "We are looking for passionate designers with atleast 2+ experience in the same field, should have thorough understanding of Figma.",
-            stacks: ["UX Designer", "Figma", "Teamwork"],
-        },
-        {
-            image: ey,
-            name: "ey",
-            role: "UI/UX Designer",
-            description:
-                "We are looking for passionate designers with atleast 2+ experience in the same field, should have thorough understanding of Figma.",
-            stacks: ["UX Designer", "Figma", "Teamwork"],
-        },
-    ];
+  const data = [
+    {
+      image: ey,
+      name: "ey",
+      role: "UI/UX Designer",
+      description:
+        "We are looking for passionate designers with atleast 2+ experience in the same field, should have thorough understanding of Figma.",
+      stacks: ["UX Designer", "Figma", "Teamwork"],
+    },
+    {
+      image: ey,
+      name: "ey",
+      role: "UI/UX Designer",
+      description:
+        "We are looking for passionate designers with atleast 2+ experience in the same field, should have thorough understanding of Figma.",
+      stacks: ["UX Designer", "Figma", "Teamwork"],
+    },
+    {
+      image: ey,
+      name: "ey",
+      role: "UI/UX Designer",
+      description:
+        "We are looking for passionate designers with atleast 2+ experience in the same field, should have thorough understanding of Figma.",
+      stacks: ["UX Designer", "Figma", "Teamwork"],
+    },
+    {
+      image: ey,
+      name: "ey",
+      role: "UI/UX Designer",
+      description:
+        "We are looking for passionate designers with atleast 2+ experience in the same field, should have thorough understanding of Figma.",
+      stacks: ["UX Designer", "Figma", "Teamwork"],
+    },
+    {
+      image: ey,
+      name: "ey",
+      role: "UI/UX Designer",
+      description:
+        "We are looking for passionate designers with atleast 2+ experience in the same field, should have thorough understanding of Figma.",
+      stacks: ["UX Designer", "Figma", "Teamwork"],
+    },
+    {
+      image: ey,
+      name: "ey",
+      role: "UI/UX Designer",
+      description:
+        "We are looking for passionate designers with atleast 2+ experience in the same field, should have thorough understanding of Figma.",
+      stacks: ["UX Designer", "Figma", "Teamwork"],
+    },
+    {
+      image: ey,
+      name: "ey",
+      role: "UI/UX Designer",
+      description:
+        "We are looking for passionate designers with atleast 2+ experience in the same field, should have thorough understanding of Figma.",
+      stacks: ["UX Designer", "Figma", "Teamwork", "some"],
+    },
+    {
+      image: ey,
+      name: "ey",
+      role: "UI/UX Designer",
+      description:
+        "We are looking for passionate designers with atleast 2+ experience in the same field, should have thorough understanding of Figma.",
+      stacks: ["UX Designer", "Figma", "Teamwork"],
+    },
+    {
+      image: ey,
+      name: "ey",
+      role: "UI/UX Designer",
+      description:
+        "We are looking for passionate designers with atleast 2+ experience in the same field, should have thorough understanding of Figma.",
+      stacks: ["UX Designer", "Figma", "Teamwork"],
+    },
+  ];
 
     return (
         <>

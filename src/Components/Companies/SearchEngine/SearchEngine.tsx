@@ -34,7 +34,7 @@ export const SearchEngine = () => {
             <div className={styles.SearchProfilesWrapper}>
                 <h1>Search By Profile</h1>
                 <div>
-                    {data.map(({ name, profile, muid, roles }) => (
+                    {data.slice(0,6).map(({ name, profile, muid, roles }) => (
                         <div key={muid} className={styles.ProfileCard}>
                             <div>
                                 <img src={profile} alt={`${name} profile`} />
