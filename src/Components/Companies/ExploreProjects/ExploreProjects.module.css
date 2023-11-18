@@ -12,6 +12,7 @@
   width: calc(100% / 3.2);
   border-radius: 20px;
   background-color: white;
+  cursor: pointer;
 }
 
 .ExploreProjectsWrapper .IndividualWrapper img {
