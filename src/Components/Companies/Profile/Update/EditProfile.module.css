@@ -4,4 +4,5 @@
     width: 100%;
     height: calc(100% - 100px);
     gap: 15px;
+    overflow-y: scroll;
 }

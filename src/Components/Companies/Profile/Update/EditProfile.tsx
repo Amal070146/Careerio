@@ -14,6 +14,13 @@ type EducationInput = {
   passOutYear: string;
 };
 
+type ExperienceInput = {
+  companyName: string;
+  role: string;
+  description: string;
+  duration: string;
+};
+
 export const EditProfile = () => {
   const [socialMediaInputs, setSocialMediaInputs] = useState<
     SocialMediaInput[]
@@ -65,6 +72,28 @@ export const EditProfile = () => {
     const newInputs = [...educationInputs];
     newInputs[index][field] = value; // TypeScript knows that field is a valid key of EducationInput
     setEducationInputs(newInputs);
+  };
+
+
+  const [experienceInputs, setExperienceInputs] = useState<ExperienceInput[]>(
+    []
+  );
+
+  const addExperienceInput = () => {
+    setExperienceInputs([
+      ...experienceInputs,
+      { companyName: "", role: "", description: "", duration: "" },
+    ]);
+  };
+
+  const handleExperienceChange = (
+    index: number,
+    field: keyof ExperienceInput,
+    value: string
+  ) => {
+    const newInputs = [...experienceInputs];
+    newInputs[index][field] = value;
+    setExperienceInputs(newInputs);
   };
 
   return (
@@ -179,6 +208,45 @@ export const EditProfile = () => {
           </div>
         ))}
         <button onClick={addEducationInput}>Add</button>
+      </div>
+      <div>
+        <h3>Experience</h3>
+        {experienceInputs.map((input, index) => (
+          <div key={index}>
+            <input
+              type="text"
+              placeholder="Company Name"
+              value={input.companyName}
+              onChange={(e) =>
+                handleExperienceChange(index, "companyName", e.target.value)
+              }
+            />
+            <input
+              type="text"
+              placeholder="Role"
+              value={input.role}
+              onChange={(e) =>
+                handleExperienceChange(index, "role", e.target.value)
+              }
+            />
+            <textarea
+              placeholder="Brief Description"
+              value={input.description}
+              onChange={(e) =>
+                handleExperienceChange(index, "description", e.target.value)
+              }
+            />
+            <input
+              type="text"
+              placeholder="Duration (e.g., Nov 2023 - Nov 2024)"
+              value={input.duration}
+              onChange={(e) =>
+                handleExperienceChange(index, "duration", e.target.value)
+              }
+            />
+          </div>
+        ))}
+        <button onClick={addExperienceInput}>Add</button>
       </div>
     </div>
   );

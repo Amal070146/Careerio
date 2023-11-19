@@ -19,7 +19,7 @@
 }
 
 
-.ProfileWrapper .Header button{
+.ProfileWrapper .Header button,.ProjectWrapper button{
     background: var(
     --button-hover,
     linear-gradient(
