@@ -8,3 +8,9 @@ interface LoginUserData {
     email: string
     password: string
 }
+
+interface userData {
+	id: number
+	username: string
+	email: string
+}

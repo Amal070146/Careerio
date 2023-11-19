@@ -21,8 +21,14 @@ export const loginUser = async (data: LoginUserData) => {
 			password: data.password,
 			email: data.email
 		});
+		const userData: userData = {
+			id: response.data.id,
+			username: response.data.username,
+			email: response.data.email
+		}
         console.log(response.data);
 		localStorage.setItem("accessToken", response.data.token);
+		localStorage.setItem("userData", JSON.stringify(userData));
     } catch (error) {
         console.error("API error:", error);
 		throw error
