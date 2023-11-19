@@ -27,14 +27,13 @@
   border: 1px solid #4c27ff;
   padding: 10px 20px;
   border-radius: 20px;
-      color: black;
-
+  color: black;
 }
 
 .BasicDetailsWrap > div > div {
   background-color: white;
   border: 1px solid #4c27ff;
- padding: 0px 20px;
+  padding: 0px 20px;
   border-radius: 20px;
   display: flex;
   align-items: center;
@@ -42,28 +41,27 @@
   justify-content: space-between;
 }
 
-.BasicDetailsWrap > div > div input{
-     padding: 10px 0px;
-      background-color: white;
-      border-radius: 20px;
-      color: black;
+.BasicDetailsWrap > div > div input {
+  padding: 10px 0px;
+  background-color: white;
+  border-radius: 20px;
+  color: black;
 }
 
-.SocialWrapper{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    width: 100%;
-
+.SocialWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
 }
-.SocialWrapper >div{
-    display: flex;
-    width: 100%;
-    gap: 20px;
+.SocialWrapper > div {
+  display: flex;
+  width: 100%;
+  gap: 20px;
 }
 
-.SocialWrapper >div >button{
-     background: var(
+.SocialWrapper > div > button ,.EducationDetailWrapper>button,.ExperienceDetailsWrapper >button{
+  background: var(
     --button-hover,
     linear-gradient(
       -82.33deg,
@@ -71,9 +69,37 @@
       rgba(129, 131, 255, 1) 100%
     )
   );
-    color: white;
-    padding: 10px 15px;
-    border-radius: 50%;
-    font-size: 20px;
-    height: fit-content;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 50%;
+  font-size: 20px;
+  height: fit-content;
+}
+
+.SocialWrapper .DataTAkingList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.SocialWrapper .DataTAkingList > div {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+.selectPlatform {
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: 1px solid blue;
+  background-color: white;
+  color: black;
+  margin-bottom: 10px; /* Separation between dropdown and input */
+}
+
+.inputLink {
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: 1px solid blue;
+  background-color: white;
 }
