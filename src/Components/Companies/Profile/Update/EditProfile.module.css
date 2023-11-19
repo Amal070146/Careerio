@@ -103,3 +103,19 @@
   border: 1px solid blue;
   background-color: white;
 }
+
+
+.EducationDetailWrapper input,.ExperienceDetailsWrapper input,.ExperienceDetailsWrapper textarea {
+  padding: 10px 20px;
+  background-color: white;
+  border-radius: 20px;
+  border: 1px solid blue;
+  margin-bottom: 10px; /* Optional: adds space between input boxes */
+}
+
+.EducationDetailWrapper .inputWrapper,.ExperienceDetailsWrapper .inputWrapper{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+}

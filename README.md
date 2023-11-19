@@ -8,7 +8,8 @@
 <p>Welcome to *Careerio*, an innovative platform designed to seamlessly connect students and companies. Powered by the Beckn protocol and integrated with OpenAI's cutting-edge API, Careerio is more than just a job board; it's a dynamic ecosystem fostering opportunities and growth.
 </p>
 
-<p>Hosted Link : https://careerio.vercel.app </p>
+<p>Frontend Hosted Link : https://careerio.vercel.app </p>
+<p>Backend Hosted Link : https://ajayvishnue.pythonanywhere.com/ </p>
 <h4>About</h4>
 <p>Decentralising the process of assessing people based on their skills, experience, projects, and other necessary requirements from the employer. We aim to provide precise, simple, and necessary data for the employer with the support of the Beckn protocol and OpenAI.</p>
 <h4>Problem Statement</h4>
@@ -31,7 +32,7 @@
 Careerio is brought to you by a dedicated team of innovators and developers:
 
 1. <b>Jenin Joseph</b>:Beckn protocol integration and implementation of various features in frontend developent such as functionality and type checking.
-GitHub Repo : 
+
 2. <b>Amal C P</b>: Specializes in front-end development and crafting the user interface.
 
 3. <b>AjayVishnu E</b>: Responsible for OpenAI Integration and managing the database.

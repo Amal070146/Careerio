@@ -180,7 +180,7 @@ export const EditProfile = () => {
         <h3>Education</h3>
         <div>
           {educationInputs.map((input, index) => (
-            <div key={index}>
+            <div key={index} className={styles.inputWrapper}>
               <input
                 type="text"
                 placeholder="Class/Standard"
@@ -230,7 +230,7 @@ export const EditProfile = () => {
         <h3>Experience</h3>
         <div>
           {experienceInputs.map((input, index) => (
-            <div key={index}>
+            <div key={index} className={styles.inputWrapper}>
               <input
                 type="text"
                 placeholder="Company Name"
@@ -256,7 +256,7 @@ export const EditProfile = () => {
               />
               <input
                 type="text"
-                placeholder="Duration (e.g., Nov 2023 - Nov 2024)"
+                placeholder="Nov 2023 - Nov 2024"
                 value={input.duration}
                 onChange={(e) =>
                   handleExperienceChange(index, "duration", e.target.value)
