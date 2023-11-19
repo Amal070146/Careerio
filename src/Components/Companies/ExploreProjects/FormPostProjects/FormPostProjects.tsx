@@ -135,23 +135,25 @@ export const FormPostProjects = () => {
                 <div className={styles.skillsRequired}>
                     <h2>Skill Required</h2>
                     <div>
-                        {skillData.map((skill, index) => (
-                            <button
-                                key={index}
-                                type="button"
-                                onClick={() => handleSkillSelect(skill)}
-                                className={
-                                    formData.skills.includes(skill)
-                                        ? styles.selected
-                                        : ""
-                                }
-                            >
-                                {skill}
-                            </button>
-                        ))}
+                        {skillData.map((skill, index) => {
+                            if (!formData.skills.includes(skill)) {
+                                return (
+                                    <button
+                                        key={index}
+                                        type="button"
+                                        onClick={() => handleSkillSelect(skill)}
+                                        className=""
+                                    >
+                                        {skill}
+                                    </button>
+                                );
+                            } else {
+                                return null;
+                            }
+                        })}
                         {formData.skills.map((skill, index) => (
                             <button
-                                key={index}
+                                key={`selected-${index}`}
                                 type="button"
                                 onClick={() => handleSkillSelect(skill)}
                                 className={styles.selected}
