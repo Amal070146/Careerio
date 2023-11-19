@@ -79,6 +79,7 @@
   background-color: white;
   gap: 15px;
   width: calc(100%/3.2);
+  cursor: pointer;
 }
 
 .SearchProfilesWrapper .ProfileCard > div {
