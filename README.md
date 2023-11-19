@@ -17,17 +17,14 @@
 <p>Careerio is a decentralised platform that can bring the data of a user from various other applications into a single domain. This is done using the Beckn protocol. The collected data is then used to assess the user and find their perfect opportunity with the hiring team. When the hiring team asks for users with certain criteria, with the help of Beckn, we are able to find the most suitable candidates for the same by searching across various platforms. We are also using OpenAI APIs to create an information section for our users based on their data. </p>
 <h4>Features</h4>
 <p>
-- <b>Interactive Dashboard</b>: A comprehensive dashboard for company officials to oversee and manage hiring processes.
-- <b>Skill-Based Hiring</b>: Filter and hire students based on specific skills and past project involvements.
-- <b>Gig Work Postings</b>: Flexibility to post short-term or freelance opportunities, tapping into a pool of eager and skilled students.
-- <b>Project Purchasing</b>: Explore student-uploaded projects, schedule meetings, and discuss potential funding and collaboration opportunities.
-
-- <b>Customizable Profiles</b>: Build and customize profiles showcasing skills, experiences, and completed projects.
-- <b>Project Showcase</b>: A platform to upload and highlight individual or group projects, attracting company interests.
-- <b>Gig Work Applications</b>: Access to a variety of gig works posted by companies, offering real-world experience and networking opportunities.
+- <b>Interactive Dashboard</b>: A comprehensive dashboard for company officials to oversee and manage hiring processes.<br>
+- <b>Skill-Based Hiring</b>: Filter and hire students based on specific skills and past project involvements.<br>
+- <b>Gig Work Postings</b>: Flexibility to post short-term or freelance opportunities, tapping into a pool of eager and skilled students.<br>
+- <b>Project Purchasing</b>: Explore student-uploaded projects, schedule meetings, and discuss potential funding and collaboration opportunities.<br>
+- <b>Customizable Profiles</b>: Build and customize profiles showcasing skills, experiences, and completed projects.<br>
+- <b>Project Showcase</b>: A platform to upload and highlight individual or group projects, attracting company interests.<br>
+- <b>Gig Work Applications</b>: Access to a variety of gig works posted by companies, offering real-world experience and networking opportunities.<br>
 - <b>AI-Enhanced Resume Builder</b>: Utilize the integrated OpenAI API to generate professional and compelling resume summaries from provided data.
-
-
 </p>
 <h4>Our Team<h4>
 <p>
