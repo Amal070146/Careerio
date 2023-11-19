@@ -1,8 +1,79 @@
-.EditProfileWrapper{
+.EditProfileWrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: calc(100% - 100px);
+  gap: 15px;
+  overflow-y: scroll;
+}
+
+.BasicDetailsWrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 80%;
+  justify-content: space-between;
+}
+
+.BasicDetailsWrap > div {
+  display: flex;
+  flex-direction: column;
+  width: 48%;
+  gap: 8px;
+}
+
+.BasicDetailsWrap > div > input {
+  background-color: white;
+  border: 1px solid #4c27ff;
+  padding: 10px 20px;
+  border-radius: 20px;
+      color: black;
+
+}
+
+.BasicDetailsWrap > div > div {
+  background-color: white;
+  border: 1px solid #4c27ff;
+ padding: 0px 20px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.BasicDetailsWrap > div > div input{
+     padding: 10px 0px;
+      background-color: white;
+      border-radius: 20px;
+      color: black;
+}
+
+.SocialWrapper{
     display: flex;
     flex-direction: column;
+    gap: 10px;
     width: 100%;
-    height: calc(100% - 100px);
-    gap: 15px;
-    overflow-y: scroll;
+
+}
+.SocialWrapper >div{
+    display: flex;
+    width: 100%;
+    gap: 20px;
+}
+
+.SocialWrapper >div >button{
+     background: var(
+    --button-hover,
+    linear-gradient(
+      -82.33deg,
+      rgba(74, 36, 255, 1) 0%,
+      rgba(129, 131, 255, 1) 100%
+    )
+  );
+    color: white;
+    padding: 10px 15px;
+    border-radius: 50%;
+    font-size: 20px;
+    height: fit-content;
 }

@@ -74,7 +74,6 @@ export const EditProfile = () => {
     setEducationInputs(newInputs);
   };
 
-
   const [experienceInputs, setExperienceInputs] = useState<ExperienceInput[]>(
     []
   );
@@ -99,7 +98,7 @@ export const EditProfile = () => {
   return (
     <div className={styles.EditProfileWrapper}>
       <h2>Edit your Profile</h2>
-      <div>
+      <div className={styles.BasicDetailsWrap}>
         <div>
           <h3>Name</h3>
           <input type="text" placeholder="Enric S Neelamkavil" />
@@ -138,35 +137,37 @@ export const EditProfile = () => {
           </div>
         </div>
       </div>
-      <div>
+      <div className={styles.SocialWrapper}>
         <h3>Social Media</h3>
         <div>
-          {socialMediaInputs.map((input, index) => (
-            <div key={index}>
-              <select
-                value={input.platform}
-                onChange={(e) =>
-                  handleSocialMediaChange(index, "platform", e.target.value)
-                }
-              >
-                <option value="">Select Platform</option>
-                {socialMediaOptions.map((option, idx) => (
-                  <option key={idx} value={option}>
-                    {option}
-                  </option>
-                ))}
-              </select>
-              <input
-                type="text"
-                placeholder="Enter link"
-                value={input.link}
-                onChange={(e) =>
-                  handleSocialMediaChange(index, "link", e.target.value)
-                }
-              />
-            </div>
-          ))}
-          <button onClick={addSocialMediaInput}>Add</button>
+          <div>
+            {socialMediaInputs.map((input, index) => (
+              <div key={index}>
+                <select
+                  value={input.platform}
+                  onChange={(e) =>
+                    handleSocialMediaChange(index, "platform", e.target.value)
+                  }
+                >
+                  <option value="">Select Platform</option>
+                  {socialMediaOptions.map((option, idx) => (
+                    <option key={idx} value={option}>
+                      {option}
+                    </option>
+                  ))}
+                </select>
+                <input
+                  type="text"
+                  placeholder="Enter link"
+                  value={input.link}
+                  onChange={(e) =>
+                    handleSocialMediaChange(index, "link", e.target.value)
+                  }
+                />
+              </div>
+            ))}
+          </div>
+          <button onClick={addSocialMediaInput}>+</button>
         </div>
       </div>
       <div>
