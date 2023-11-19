@@ -74,7 +74,6 @@ export const EditProfile = () => {
     setEducationInputs(newInputs);
   };
 
-
   const [experienceInputs, setExperienceInputs] = useState<ExperienceInput[]>(
     []
   );
@@ -99,7 +98,7 @@ export const EditProfile = () => {
   return (
     <div className={styles.EditProfileWrapper}>
       <h2>Edit your Profile</h2>
-      <div>
+      <div className={styles.BasicDetailsWrap}>
         <div>
           <h3>Name</h3>
           <input type="text" placeholder="Enric S Neelamkavil" />
@@ -138,115 +137,135 @@ export const EditProfile = () => {
           </div>
         </div>
       </div>
-      <div>
+      <div className={styles.SocialWrapper}>
         <h3>Social Media</h3>
         <div>
-          {socialMediaInputs.map((input, index) => (
+          <div className={styles.DataTAkingList}>
+            {socialMediaInputs.map((input, index) => (
+              <div key={index}>
+                <select
+                  value={input.platform}
+                  onChange={(e) =>
+                    handleSocialMediaChange(index, "platform", e.target.value)
+                  }
+                  className={styles.selectPlatform}
+                >
+                  <option value="">Select Platform</option>
+                  {socialMediaOptions.map((option, idx) => (
+                    <option
+                      key={idx}
+                      value={option}
+                      className={styles.selectPlatform}
+                    >
+                      {option}
+                    </option>
+                  ))}
+                </select>
+                <input
+                  type="text"
+                  placeholder="Enter link"
+                  value={input.link}
+                  onChange={(e) =>
+                    handleSocialMediaChange(index, "link", e.target.value)
+                  }
+                  className={styles.inputLink}
+                />
+              </div>
+            ))}
+          </div>
+          <button onClick={addSocialMediaInput}>+</button>
+        </div>
+      </div>
+      <div className={styles.EducationDetailWrapper}>
+        <h3>Education</h3>
+        <div>
+          {educationInputs.map((input, index) => (
             <div key={index}>
-              <select
-                value={input.platform}
-                onChange={(e) =>
-                  handleSocialMediaChange(index, "platform", e.target.value)
-                }
-              >
-                <option value="">Select Platform</option>
-                {socialMediaOptions.map((option, idx) => (
-                  <option key={idx} value={option}>
-                    {option}
-                  </option>
-                ))}
-              </select>
               <input
                 type="text"
-                placeholder="Enter link"
-                value={input.link}
+                placeholder="Class/Standard"
+                value={input.classOrStandard}
                 onChange={(e) =>
-                  handleSocialMediaChange(index, "link", e.target.value)
+                  handleEducationChange(
+                    index,
+                    "classOrStandard",
+                    e.target.value
+                  )
+                }
+              />
+              <input
+                type="text"
+                placeholder="School/College Name"
+                value={input.schoolOrCollege}
+                onChange={(e) =>
+                  handleEducationChange(
+                    index,
+                    "schoolOrCollege",
+                    e.target.value
+                  )
+                }
+              />
+              <input
+                type="text"
+                placeholder="University Name"
+                value={input.university}
+                onChange={(e) =>
+                  handleEducationChange(index, "university", e.target.value)
+                }
+              />
+              <input
+                type="text"
+                placeholder="Pass Out Year"
+                value={input.passOutYear}
+                onChange={(e) =>
+                  handleEducationChange(index, "passOutYear", e.target.value)
                 }
               />
             </div>
           ))}
-          <button onClick={addSocialMediaInput}>Add</button>
         </div>
+        <button onClick={addEducationInput}>+</button>
       </div>
-      <div>
-        <h3>Education</h3>
-        {educationInputs.map((input, index) => (
-          <div key={index}>
-            <input
-              type="text"
-              placeholder="Class/Standard"
-              value={input.classOrStandard}
-              onChange={(e) =>
-                handleEducationChange(index, "classOrStandard", e.target.value)
-              }
-            />
-            <input
-              type="text"
-              placeholder="School/College Name"
-              value={input.schoolOrCollege}
-              onChange={(e) =>
-                handleEducationChange(index, "schoolOrCollege", e.target.value)
-              }
-            />
-            <input
-              type="text"
-              placeholder="University Name"
-              value={input.university}
-              onChange={(e) =>
-                handleEducationChange(index, "university", e.target.value)
-              }
-            />
-            <input
-              type="text"
-              placeholder="Pass Out Year"
-              value={input.passOutYear}
-              onChange={(e) =>
-                handleEducationChange(index, "passOutYear", e.target.value)
-              }
-            />
-          </div>
-        ))}
-        <button onClick={addEducationInput}>Add</button>
-      </div>
-      <div>
+      <div className={styles.ExperienceDetailsWrapper}>
         <h3>Experience</h3>
-        {experienceInputs.map((input, index) => (
-          <div key={index}>
-            <input
-              type="text"
-              placeholder="Company Name"
-              value={input.companyName}
-              onChange={(e) =>
-                handleExperienceChange(index, "companyName", e.target.value)
-              }
-            />
-            <input
-              type="text"
-              placeholder="Role"
-              value={input.role}
-              onChange={(e) =>
-                handleExperienceChange(index, "role", e.target.value)
-              }
-            />
-            <textarea
-              placeholder="Brief Description"
-              value={input.description}
-              onChange={(e) =>
-                handleExperienceChange(index, "description", e.target.value)
-              }
-            />
-            <input
-              type="text"
-              placeholder="Duration (e.g., Nov 2023 - Nov 2024)"
-              value={input.duration}
-              onChange={(e) =>
-                handleExperienceChange(index, "duration", e.target.value)
-              }
-            />
-          </div>
-        ))}
-        <button onClick={addExperienceInput}>Add</button>
+        <div>
+          {experienceInputs.map((input, index) => (
+            <div key={index}>
+              <input
+                type="text"
+                placeholder="Company Name"
+                value={input.companyName}
+                onChange={(e) =>
+                  handleExperienceChange(index, "companyName", e.target.value)
+                }
+              />
+              <input
+                type="text"
+                placeholder="Role"
+                value={input.role}
+                onChange={(e) =>
+                  handleExperienceChange(index, "role", e.target.value)
+                }
+              />
+              <textarea
+                placeholder="Brief Description"
+                value={input.description}
+                onChange={(e) =>
+                  handleExperienceChange(index, "description", e.target.value)
+                }
+              />
+              <input
+                type="text"
+                placeholder="Duration (e.g., Nov 2023 - Nov 2024)"
+                value={input.duration}
+                onChange={(e) =>
+                  handleExperienceChange(index, "duration", e.target.value)
+                }
+              />
+            </div>
+          ))}
+        </div>
+        <button onClick={addExperienceInput}>+</button>
       </div>
     </div>
   );
