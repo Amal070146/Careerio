@@ -99,6 +99,7 @@
   padding: 10px;
   border-radius: 20px;
   background-color: white;
+  cursor: pointer;
 }
 
 .AvailableGigsWrapper .DataBlockWrapper .IndividualWrapper .firstDiv {
