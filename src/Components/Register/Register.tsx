@@ -9,17 +9,18 @@ export const Register = (_props: Props) => {
     const [registerval, Setregisterval] = useState(true);
 
     return (
-        <div className={styles.RegistrationWrapper}>
-            <div>
-                {registerval ? (
-                    <Signup setval={Setregisterval} />
-                ) : (
-                    <Login setval={Setregisterval} />
-                )}
-            </div>
-            <div className={styles.ImageContainer}>
-                <img src={image} alt="" />
-            </div>
+      <div className={styles.RegistrationWrapper}>
+        <div className={styles.ForSection}>
+          {registerval ? (
+            <Signup setval={Setregisterval} />
+          ) : (
+            <Login setval={Setregisterval} />
+          )}
         </div>
+        <div className={styles.ImageContainer}>
+          <img src={image} alt="" />
+        </div>
+        <p className={styles.copyRight}>All Rights Reserved. careerio 2023</p>
+      </div>
     );
 };

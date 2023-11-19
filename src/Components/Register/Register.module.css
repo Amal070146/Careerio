@@ -7,14 +7,105 @@
   justify-content: center;
   background: url("./assets/background.png") center center/cover no-repeat;
 }
-
+.ForSection {
+  background-color: white;
+  height: 75vh;
+  padding: 50px;
+  border-radius: 20px 0px 0px 20px;
+  width: 40%;
+}
 .ImageContainer {
   background: #ede9ff;
   width: 40%;
- 
+  height: 75vh;
+  border-radius: 0px 20px 20px 0px;
 }
 .ImageContainer img {
   width: 100%;
-  height: auto;
+  height: 100%;
   object-fit: contain;
+}
+
+.copyRight {
+  position: absolute;
+  bottom: 20px;
+  color: #a9b3d3;
+}
+
+
+/* Login and signup */
+
+.SignupWrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.HeaderSection{
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.HeaderSection h2{
+  font-size: 25px;
+  line-height: 1;
+
+}
+
+.HeaderSection p{
+  font-size: 17px;
+  color: #A3AED0;
+}
+
+.FormWrapper{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 100%;
+}
+
+.FormWrapper .InputContent{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 100%;
+}
+
+.FormWrapper .InputContent input{
+  border: 1px solid black;
+  border-radius: 20px;
+  padding: 10px;
+  width: 100%;
+  background-color: white;
+  color: black;
+}
+.FormWrapper .RembForg{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.FormWrapper .ButtonWrapper{
+  margin-top: 10px;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.FormWrapper .ButtonWrapper button{
+  background-color: white;
+  width: 45%;
+  border-radius: 20px;
+  border: 1px solid #4318FF;
+}
+.OtherLogins{
+  display: flex;
+  gap: 20px;
+}
+
+.OtherLogins a{
+  font-size: 17px;
+  font-weight: 600;
+  color: black;
 }

@@ -41,55 +41,53 @@ export const Login = ({ setval }: SignupProps) => {
     };
 
     return (
-        <div className={styles.SignupWrapper}>
-            <LogoSVG />
-            <div className={styles.HeaderSection}>
-                <h2>Dedicated to navigating futures and shaping careers.</h2>
-                <p>Welcome Back, Please login to your account</p>
-            </div>
-            <form className={styles.FormWrapper} onSubmit={handleSubmit}>
-                <div>
-                    <p>Email</p>
-                    <input
-                        type="email"
-                        name="email"
-                        placeholder="robert.langster@gmail.com"
-                        value={loginData.email}
-                        onChange={handleChange}
-                    />
-                </div>
-                <div>
-                    <p>Password</p>
-                    <input
-                        type="password"
-                        name="password"
-                        placeholder="....."
-                        value={loginData.password}
-                        onChange={handleChange}
-                    />
-                </div>
-                <div className={styles.ButtonWrapper}>
-                    <button
-                        style={{ backgroundColor: "#4318FF" }}
-                        type="submit"
-                    >
-                        Log In
-                    </button>
-                    <button
-                        onClick={() => {
-                            setval(true);
-                        }}
-                    >
-                        Sign Up
-                    </button>
-                </div>
-            </form>
-            <div className={styles.OtherLogins} onClick={comingSoon}>
-                <p>Or, Login with</p>
-                <p>Facebook</p>
-                <p>LinkedIn</p>
-                <p>Google</p>
-            </div>
+      <div className={styles.SignupWrapper}>
+        <LogoSVG />
+        <div className={styles.HeaderSection}>
+          <h2>Dedicated to navigating futures and shaping careers.</h2>
+          <p>Welcome Back, Please login to your account</p>
         </div>
+        <form className={styles.FormWrapper} onSubmit={handleSubmit}>
+          <div className={styles.InputContent}>
+            <p>Email</p>
+            <input
+              type="email"
+              name="email"
+              placeholder="robert.langster@gmail.com"
+              value={loginData.email}
+              onChange={handleChange}
+            />
+          </div>
+          <div className={styles.InputContent}>
+            <p>Password</p>
+            <input
+              type="password"
+              name="password"
+              placeholder="....."
+              value={loginData.password}
+              onChange={handleChange}
+            />
+          </div>
+          <div className={styles.ButtonWrapper}>
+            <button style={{ backgroundColor: "#4318FF" }} type="submit">
+              Log In
+            </button>
+            <button
+              onClick={() => {
+                setval(true);
+              }}
+              style={{ color: "#4318FF" }}
+            >
+              Sign Up
+            </button>
+          </div>
+        </form>
+        <div className={styles.OtherLogins} onClick={comingSoon}>
+          <p>Or, Login with</p>
+          <a href="">Facebook</a>
+          <a href="">LinkedIn</a>
+          <a href="">Google</a>
+        </div>
+      </div>
     );
 };
