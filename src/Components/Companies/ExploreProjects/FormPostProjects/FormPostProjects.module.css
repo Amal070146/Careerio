@@ -78,6 +78,7 @@
 .FormPostWrapper form .skillsRequired > div {
   display: flex;
   gap: 10px;
+  width: 100%;flex-wrap: wrap;
 }
 
 .FormPostWrapper form .skillsRequired > div button {
