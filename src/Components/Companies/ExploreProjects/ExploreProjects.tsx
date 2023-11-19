@@ -96,11 +96,17 @@ export const ExploreProjects = () => {
             Partner with us today and experience the difference in gig work
             postings.
           </p>
-          <Link to="/formpostgig">Post a Project!</Link>
+          <Link to="/formpostprojects">Post a Project!</Link>
         </div>
       </div>
       {data.map(({ name, title, description, stacks, collabs }) => (
-       <CardProjects name={name} title={title} description={description} stacks={stacks} collabs={collabs} />
+        <CardProjects
+          name={name}
+          title={title}
+          description={description}
+          stacks={stacks}
+          collabs={collabs}
+        />
       ))}
     </div>
   );
