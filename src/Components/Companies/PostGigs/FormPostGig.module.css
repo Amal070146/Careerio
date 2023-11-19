@@ -1,0 +1,119 @@
+.FormPostWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  height: calc(100% - 100px);
+  overflow-y: scroll;
+}
+
+.FormPostWrapper > h1 {
+  font-size: 25px;
+}
+
+.FormPostWrapper form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 20px;
+}
+
+.FormPostWrapper form .InputContentWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 80%;
+}
+.FormPostWrapper form .InputContentWrapper p {
+  font-weight: 500;
+}
+
+.FormPostWrapper form .InputContentWrapper .BasicDetailsWrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 10px;
+  width: 100%;
+}
+
+.FormPostWrapper form .InputContentWrapper .BasicDetailsWrap > div {
+  display: flex;
+  flex-direction: column;
+  width: calc(100% / 2.1);
+  gap: 5px;
+}
+
+.FormPostWrapper form .InputContentWrapper .BasicDetailsWrap > div input {
+  border: 1px solid black;
+  border-radius: 20px;
+  padding: 10px;
+  width: 100%;
+  background-color: white;
+  color: black;
+}
+
+.FormPostWrapper form .InputContentWrapper .Description {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 5px;
+}
+
+.FormPostWrapper form .InputContentWrapper .Description textarea {
+  border: 1px solid black;
+  border-radius: 20px;
+  padding: 10px;
+  width: 100%;
+  background-color: white;
+  color: black;
+  min-height: 150px;
+}
+
+.FormPostWrapper form .skillsRequired {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 10px;
+}
+.FormPostWrapper form .skillsRequired > div {
+  display: flex;
+  gap: 10px;
+}
+
+.FormPostWrapper form .skillsRequired > div button {
+  background-color: #ece7ff;
+  color: #4c27ff;
+  border-radius: 20px;
+  padding: 5px 15px;
+}
+.FormPostWrapper form .skillsRequired > div .selected {
+  background: var(
+    --button-hover,
+    linear-gradient(
+      -82.33deg,
+      rgba(74, 36, 255, 1) 0%,
+      rgba(129, 131, 255, 1) 100%
+    )
+  ) !important;
+  color: white;
+}
+
+.FormPostWrapper form .skillsRequired > div input{
+    border: 1px solid #4c27ff;
+    color: black;
+    background-color: #ece7ff;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.FormPostWrapper form .ButtonWrapper{
+    display: flex;
+    gap: 20px;
+}
+
+.FormPostWrapper form .ButtonWrapper button{
+    background-color: #4c27ff;
+     border-radius: 20px;
+    padding:8px 35px;
+    border: 1px solid #4c27ff;
+}

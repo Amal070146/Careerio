@@ -12,6 +12,7 @@ import Profile from "./Components/Companies/Profile/Profile";
 import Notify from "./Components/notification/Notify";
 import Gig from "./Components/Companies/Gig/Gig";
 import { FormPostProjects } from "./Components/Companies/ExploreProjects/FormPostProjects/FormPostProjects";
+import { EditProfile } from "./Components/Companies/Profile/Update/EditProfile";
 
 function App() {
     const router = createBrowserRouter([
@@ -26,7 +27,7 @@ function App() {
                 { path: "exploreprojects", element: <ExploreProjects /> },
                 { path: "formpostgig", element: <FormPostGigs /> },
                 { path: "profile/:id", element: <Profile /> },
-                { path: "editprofile", element: <Notify /> },
+                { path: "editprofile", element: <EditProfile /> },
                 { path: "project/:id", element: <Project /> },
                 { path: "formpostprojects", element: <FormPostProjects /> },
                 { path: "notification/:id", element: <Notify /> },
