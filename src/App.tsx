@@ -15,26 +15,27 @@ import { FormPostProjects } from "./Components/Companies/ExploreProjects/FormPos
 
 function App() {
     const router = createBrowserRouter([
-      {
-        path: "/",
-        element: <HeroSection />,
-        children: [
-          { path: "/", element: <Dashboard /> },
-          { path: "searchengine", element: <SearchEngine /> },
-          { path: "postgigs", element: <PostGigs /> },
-          { path: "gig/:id", element: <Gig /> },
-          { path: "exploreprojects", element: <ExploreProjects /> },
-          { path: "formpostgig", element: <FormPostGigs /> },
-          { path: "profile/:id", element: <Profile /> },
-          { path: "project/:id", element: <Project /> },
-          { path: "formpostprojects", element: <FormPostProjects /> },
-          { path: "notification/:id", element: <Notify /> },
-        ],
-      },
-      {
-        path: "register",
-        element: <Register />,
-      },
+        {
+            path: "/",
+            element: <HeroSection />,
+            children: [
+                { path: "/", element: <Dashboard /> },
+                { path: "searchengine", element: <SearchEngine /> },
+                { path: "postgigs", element: <PostGigs /> },
+                { path: "gig/:id", element: <Gig /> },
+                { path: "exploreprojects", element: <ExploreProjects /> },
+                { path: "formpostgig", element: <FormPostGigs /> },
+                { path: "profile/:id", element: <Profile /> },
+                { path: "editprofile", element: <Notify /> },
+                { path: "project/:id", element: <Project /> },
+                { path: "formpostprojects", element: <FormPostProjects /> },
+                { path: "notification/:id", element: <Notify /> },
+            ],
+        },
+        {
+            path: "register",
+            element: <Register />,
+        },
     ]);
 
     return <RouterProvider router={router} />;
