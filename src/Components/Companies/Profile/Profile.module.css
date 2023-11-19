@@ -5,4 +5,91 @@
     padding: 20px;
     background-color: white;
     overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  
+}
+
+.ProfileWrapper .Header{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.ProfileWrapper .Header>div{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.ProfileWrapper .Description{
+    font-size: 16px;
+  
+}
+
+.ProfileWrapper .ContactDetailsWrapper{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.ProfileWrapper .ContactDetailsWrapper>div{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.ProfileWrapper .skillsWrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.ProfileWrapper .skillsWrapper>div{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.ProfileWrapper .skillsWrapper>div p{
+    background-color: #ECE7FF;
+    color: #4C27FF;
+    padding: 5px 15px;
+    border-radius: 20px
+}
+
+.ProfileWrapper .ExperienceWrapper{
+    display: flex;
+    flex-direction: column;
+    gap:8px;
+    width: 100%;
+}
+
+.ProfileWrapper .ExperienceWrapper>div{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+}
+
+.ProfileWrapper .ExperienceWrapper .ExperienceIndividualWrapper{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.ProfileWrapper .ProjectWrapper{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 10px;
+}
+.ProfileWrapper .ProjectWrapper>div{
+       display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 10px;
 }
