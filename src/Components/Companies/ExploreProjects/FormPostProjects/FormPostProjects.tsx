@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import styles from './FormPostProjects.module.css'
+import { useState } from "react";
+import styles from "./FormPostProjects.module.css";
 
 interface FormData {
   title: string;
@@ -9,7 +9,6 @@ interface FormData {
   duration: string;
   skills: string[];
 }
-
 
 export const FormPostProjects = () => {
   const skillData = ["Python", "React", "Django", "Flask", "Node", "Express"];
@@ -92,8 +91,8 @@ export const FormPostProjects = () => {
     <div className={styles.FormPostWrapper}>
       <h1>Post a Project</h1>
       <form onSubmit={handleSubmit}>
-        <div>
-          <div>
+        <div className={styles.InputContentWrapper}>
+          <div className={styles.BasicDetailsWrap}>
             <div>
               <p>Title</p>
               <input
@@ -115,59 +114,54 @@ export const FormPostProjects = () => {
               />
             </div>
           </div>
-          <div>
-            <div>
-              <p>Description</p>
-              <textarea
-                name="description"
-                value={formData.description}
-                onChange={handleChange}
-              ></textarea>
-            </div>
-            <div>
-              <div>
-                <p>Budget(Approx*)</p>
-                <input
-                  type="text"
-                  name="budget"
-                  placeholder="20,000 Rs"
-                  value={formData.budget}
-                  onChange={handleChange}
-                />
-              </div>
-              <div>
-                <p>Expected Duration</p>
-                <input
-                  type="text"
-                  name="duration"
-                  placeholder="2 Weeks"
-                  value={formData.duration}
-                  onChange={handleChange}
-                />
-              </div>
-            </div>
+
+          <div className={styles.Description}>
+            <p>Description</p>
+            <textarea
+              name="description"
+              value={formData.description}
+              onChange={handleChange}
+            ></textarea>
+          </div>
+          <div className={styles.Description}>
+            <p>Project Deliverables:</p>
+            <textarea
+              name="description"
+              value={formData.description}
+              onChange={handleChange}
+            ></textarea>
           </div>
         </div>
-        <div>
-          <p>Skill Required</p>
-          {skillData.map((skill, index) => (
-            <button
-              key={index}
-              type="button"
-              onClick={() => handleSkillSelect(skill)}
-              className={formData.skills.includes(skill) ? styles.selected : ""}
-            >
-              {skill}
-            </button>
-          ))}
+        <div className={styles.skillsRequired}>
+          <h2>Skill Required</h2>
+          <div>
+            {skillData.map((skill, index) => (
+              <button
+                key={index}
+                type="button"
+                onClick={() => handleSkillSelect(skill)}
+                className={
+                  formData.skills.includes(skill) ? styles.selected : ""
+                }
+              >
+                {skill}
+              </button>
+            ))}
+            <button>+</button>
+            <input type="text" />
+          </div>
         </div>
-        <div>
-          <button type="submit">Post Gig</button>
-          <button type="button" onClick={handleClear}>
+        <div className={styles.ButtonWrapper}>
+          <button type="submit">Post Project</button>
+          <button
+            type="button"
+            onClick={handleClear}
+            style={{ backgroundColor: "white", color: "#4c27ff" }}
+          >
             Clear all
           </button>
         </div>
       </form>
     </div>
   );
-}
+};
