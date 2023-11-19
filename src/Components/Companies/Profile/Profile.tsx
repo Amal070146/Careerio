@@ -50,6 +50,16 @@ const Profile = () => {
     <div className={styles.ProfileWrapper}>
       <div className={styles.Header}>
         <h2>Hi, I’m Sagar 👋</h2>
+        <button>Update</button>
+      </div>
+      <p className={styles.Description}>
+        I'm a full stack developer (React.js & Node.js) with a focus on creating
+        (and occasionally designing) exceptional digital experiences that are
+        fast, accessible, visually appealing, and responsive. Even though I have
+        been creating web applications for over 7 years, I still love it as if
+        it was something new.
+      </p>
+      <div className={styles.ContactDetailsWrapper}>
         <div>
           <a href="">
             <GithubLogos />
@@ -67,34 +77,20 @@ const Profile = () => {
             <FigmaLogos />
           </a>
         </div>
-      </div>
-      <p className={styles.Description}>
-        I'm a full stack developer (React.js & Node.js) with a focus on creating
-        (and occasionally designing) exceptional digital experiences that are
-        fast, accessible, visually appealing, and responsive. Even though I have
-        been creating web applications for over 7 years, I still love it as if
-        it was something new.
-      </p>
-      <div className={styles.ContactDetailsWrapper}>
-        <div>
-          <div
-            style={{ backgroundColor: "#10B981", width: "5px", height: "5px" }}
-          ></div>
-          <p>Available for new projects</p>
-        </div>
+
         <div>
           <LocationLogos />
           <p>Ahmedabad, India</p>
         </div>
-        <div>
+        <a href="tel:+918980500565">
           {" "}
           <PhoneLogos />
           <p>+91 8980500565</p>
-        </div>
-        <div>
+        </a>
+        <a href="mailto:reachsagarshah@gmail.com">
           <MailLogos />
           <p>reachsagarshah@gmail.com</p>
-        </div>
+        </a>
       </div>
       <div className={styles.skillsWrapper}>
         <h2>My Skills</h2>
