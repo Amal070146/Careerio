@@ -1,38 +1,5 @@
 import toast from "react-hot-toast";
 
-export const defaultGigs: GigData[] = [
-    {
-        id: 1,
-        title: "Frontend Developer",
-        companyName: "Tech Corp",
-        description:
-            "Looking for an experienced Frontend Developer proficient in React.",
-        budget: "10,000",
-        duration: "3 months",
-        skills: ["React", "JavaScript", "CSS"],
-    },
-    {
-        id: 2,
-        title: "Backend Developer",
-        companyName: "Innovate Solutions",
-        description:
-            "Seeking a skilled Backend Developer with Node.js experience.",
-        budget: "12,000",
-        duration: "4 months",
-        skills: ["Node.js", "MongoDB", "Express"],
-    },
-    {
-        id: 3,
-        title: "Full Stack Developer",
-        companyName: "Startup X",
-        description:
-            "Startup X is looking for a versatile Full Stack Developer.",
-        budget: "15,000",
-        duration: "6 months",
-        skills: ["React", "Node.js", "SQL"],
-    },
-];
-
 export const DrumsIcon = ({ colors, width, height }: DrumsIconProps) => {
     return (
         <svg
