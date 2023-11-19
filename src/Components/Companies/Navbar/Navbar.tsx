@@ -125,7 +125,10 @@ export const Navbar = () => {
                     </Link>
                 </div>
             </div>
-            <button onClick={() => localStorage.removeItem("accessToken")}>
+            <button onClick={() => {
+				localStorage.removeItem("accessToken")
+				window.location.reload()
+			}}>
                 Log Out
             </button>
         </div>
