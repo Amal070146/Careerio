@@ -10,7 +10,7 @@
 
 <p>Frontend Hosted Link : https://careerio.vercel.app </p>
 <p>Backend Hosted Link : https://ajayvishnue.pythonanywhere.com/ </p>
-<p>Figma(Design/PPT) : <a href="bit.ly/top-100-coders-careerio/">bit.ly/top-100-coders-careerio/ </p>
+<p>Figma(Design/PPT) : bit.ly/top-100-coders-careerio/ </p>
 <h4>About</h4>
 <p>Decentralising the process of assessing people based on their skills, experience, projects, and other necessary requirements from the employer. We aim to provide precise, simple, and necessary data for the employer with the support of the Beckn protocol and OpenAI.</p>
 <h4>Problem Statement</h4>
