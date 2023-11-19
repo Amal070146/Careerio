@@ -7,6 +7,8 @@
 <h4>Introduction<h4>
 <p>Welcome to *Careerio*, an innovative platform designed to seamlessly connect students and companies. Powered by the Beckn protocol and integrated with OpenAI's cutting-edge API, Careerio is more than just a job board; it's a dynamic ecosystem fostering opportunities and growth.
 </p>
+
+<p>Hosted Link : https://careerio.vercel.app </p>
 <h4>About</h4>
 <p>Decentralising the process of assessing people based on their skills, experience, projects, and other necessary requirements from the employer. We aim to provide precise, simple, and necessary data for the employer with the support of the Beckn protocol and OpenAI.</p>
 <h4>Problem Statement</h4>
