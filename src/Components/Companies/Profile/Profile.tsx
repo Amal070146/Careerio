@@ -1,6 +1,5 @@
 import { CardProjects } from "../ExploreProjects/ExploreProjects";
 import styles from "./Profile.module.css";
-import ey from "../PostGigs/assets/ey.png";
 import {
     BehanceLogos,
     FigmaLogos,
@@ -16,38 +15,6 @@ import { useEffect, useState } from "react";
 import { getUserProjects } from "../SearchEngine/SearchEngineApis";
 
 const Profile = () => {
-    const data = [
-        {
-            image: ey,
-            name: "careerio",
-            title: "Bristol",
-            description:
-                "Comets are a big source of meteoroids because of the nature of those long tails. A large amount of dust.",
-            stacks: ["UX Designer", "Figma", "Teamwork"],
-            bgcolor: "blue",
-            collabs: [
-                "https://shorturl.at/IJKV5",
-                "https://shorturl.at/cqSW3",
-                "https://shorturl.at/bouY2",
-            ],
-        },
-        {
-            image: ey,
-            name: "careerio",
-            title: "Bristol",
-            description:
-                "Comets are a big source of meteoroids because of the nature of those long tails. A large amount of dust.",
-            stacks: ["UX Designer", "Figma", "Teamwork"],
-            bgcolor: "blue",
-            collabs: [
-                "https://shorturl.at/IJKV5",
-                "https://shorturl.at/cqSW3",
-                "https://shorturl.at/bouY2",
-            ],
-        },
-
-        // ... more data items if needed
-    ];
 
     const userData: userData = JSON.parse(
         localStorage.getItem("userData") || "{}"
@@ -55,14 +22,14 @@ const Profile = () => {
     const navigate = useNavigate();
 
 	const [project, setProject] = useState<ProjectData[]>([]);
-	const [desc, setDesc] = useState("");
+	// const [desc, setDesc] = useState("");
 
     useEffect(() => {
         const fetchData = async () => {
             const result = await getUserProjects();
             setProject(result);
-			const description = await getUserProjects();
-			
+			// const description = await getUserProjects();
+
         };
 
         fetchData();
