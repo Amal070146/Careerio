@@ -1,85 +1,10 @@
 import styles from "./ExploreProjects.module.css";
-import ey from "../PostGigs/assets/ey.png";
 import { Link, useNavigate } from "react-router-dom";
 import { DrumsIcon } from "../PostGigs/utils/commom";
 import { useEffect, useState } from "react";
 import { getProject } from "./ExploreProjectsApi";
-import toast from "react-hot-toast";
 
 export const ExploreProjects = () => {
-    const data1 = [
-        {
-            image: ey,
-            name: "careerio",
-            title: "Bristol",
-            description:
-                "Comets are a big source of meteoroids because of the nature of those long tails. A large amount of dust.",
-            stacks: ["UX Designer", "Figma", "Teamwork"],
-            bgcolor: "blue",
-            collabs: [
-                "https://shorturl.at/IJKV5",
-                "https://shorturl.at/cqSW3",
-                "https://shorturl.at/bouY2",
-            ],
-        },
-        {
-            image: ey,
-            name: "careerio",
-            title: "Bristol",
-            description:
-                "Comets are a big source of meteoroids because of the nature of those long tails. A large amount of dust.",
-            stacks: ["UX Designer", "Figma", "Teamwork"],
-            bgcolor: "blue",
-            collabs: [
-                "https://shorturl.at/IJKV5",
-                "https://shorturl.at/cqSW3",
-                "https://shorturl.at/bouY2",
-            ],
-        },
-        {
-            image: ey,
-            name: "careerio",
-            title: "Bristol",
-            description:
-                "Comets are a big source of meteoroids because of the nature of those long tails. A large amount of dust.",
-            stacks: ["UX Designer", "Figma", "Teamwork"],
-            bgcolor: "blue",
-            collabs: [
-                "https://shorturl.at/IJKV5",
-                "https://shorturl.at/cqSW3",
-                "https://shorturl.at/bouY2",
-            ],
-        },
-        {
-            image: ey,
-            name: "careerio",
-            title: "Bristol",
-            description:
-                "Comets are a big source of meteoroids because of the nature of those long tails. A large amount of dust.",
-            stacks: ["UX Designer", "Figma", "Teamwork"],
-            bgcolor: "blue",
-            collabs: [
-                "https://shorturl.at/IJKV5",
-                "https://shorturl.at/cqSW3",
-                "https://shorturl.at/bouY2",
-            ],
-        },
-        {
-            image: ey,
-            name: "careerio",
-            title: "Bristol",
-            description:
-                "Comets are a big source of meteoroids because of the nature of those long tails. A large amount of dust.",
-            stacks: ["UX Designer", "Figma", "Teamwork"],
-            bgcolor: "blue",
-            collabs: [
-                "https://shorturl.at/IJKV5",
-                "https://shorturl.at/cqSW3",
-                "https://shorturl.at/bouY2",
-            ],
-        },
-        // ... more data items if needed
-    ];
 
 	const [data, setData] = useState<ProjectData[]>([]);
 
