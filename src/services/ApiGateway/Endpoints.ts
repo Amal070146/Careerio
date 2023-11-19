@@ -6,5 +6,7 @@ export const apiRoutes = {
 	getAllProjects: "allprojects/",
 	addGig: "creategig/",
 	getAllGigs: "allgigs/",
-	
+	getUserProjects: "projectuserlist/",
+	openAI: "builder/",
+	createResume: "createresumedata/",
 }

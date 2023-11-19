@@ -38,7 +38,7 @@ export const SearchEngine = () => {
                 <h1>Search By Profile</h1>
                 <div>
                     {data.slice(0,6).map(({ name, profile, muid, roles }) => (
-                        <div key={muid} className={styles.ProfileCard} onClick={() => navigate(`/profile/${muid}`)}>
+                        <div key={muid} className={styles.ProfileCard} onClick={() => navigate(`/guest-profile/${muid}`)}>
                             <div>
                                 <img src={profile} alt={`${name} profile`} />
                                 <div>
