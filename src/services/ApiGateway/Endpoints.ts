@@ -3,4 +3,5 @@ export const apiRoutes = {
 	register: "register/",
 	login: "login/",
 	addProject: "createproject/",
+	getAllProjects: "allprojects/",
 }

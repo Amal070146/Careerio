@@ -17,3 +17,13 @@ export const addProject = async (data: ProjectFormData) => {
         throw error;
     }
 };
+
+export const getProject = async () => {
+    try {
+        const response = await privateGateway.get(apiRoutes.getAllProjects);
+        return response.data;
+    } catch (error) {
+        console.error("API error:", error);
+        throw error;
+    }
+};
