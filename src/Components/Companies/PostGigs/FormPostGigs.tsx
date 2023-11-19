@@ -1,5 +1,6 @@
 import { useState } from "react";
 import styles from "./FormPostGig.module.css";
+import toast from "react-hot-toast";
 
 interface FormData {
     title: string;
@@ -45,26 +46,21 @@ export const FormPostGigs = () => {
     // Handle form submission
     const handleSubmit = (e: { preventDefault: () => void; }) => {
         e.preventDefault();
-
-        // Generate a unique ID for the new gig
         const newId = Date.now();
-
-        // Create a new gig object
         const newGig = { ...formData, id: newId };
-
-        // Get existing gigs from local storage
-        const gigsFromStorage = localStorage.getItem("gigs");
-        const existingGigs = gigsFromStorage ? JSON.parse(gigsFromStorage) : [];
-
-        // Append the new gig to the existing ones
-        const updatedGigs = [...existingGigs, newGig];
-
-        // Save the updated gigs array to local storage
-        localStorage.setItem("gigs", JSON.stringify(updatedGigs));
+		if (
+            !formData.title ||
+            !formData.companyName ||
+            !formData.description ||
+            !formData.budget ||
+            !formData.duration ||
+            formData.skills.length === 0
+        ) {
+            toast.error("Please fill in all fields.");
+            return;
+        }
 
         console.log(newGig);
-
-        // Optionally, reset the form here
         setFormData({
             title: "",
             companyName: "",
