@@ -2,22 +2,29 @@ import { Link, useNavigate } from "react-router-dom";
 import styles from "./PostGigs.module.css";
 import { useEffect, useState } from "react";
 import image from "./assets/ey.png";
-import { DrumsIcon, defaultGigs } from "./utils/commom";
+import { DrumsIcon} from "./utils/commom";
+import { getGigs } from "./PostGigApis";
 
 export const PostGigs = () => {
-	const [gigs, setGigs] = useState<GigData[]>([]);
 	const navigate = useNavigate()
 
+    const [data, setData] = useState<GigData[]>([]);
+
     useEffect(() => {
-        // Check and initialize local storage with default gigs if empty
-        const storedGigs = localStorage.getItem("gigs");
-        if (!storedGigs) {
-            localStorage.setItem("gigs", JSON.stringify(defaultGigs));
-            setGigs(defaultGigs);
-        } else {
-            setGigs(JSON.parse(storedGigs));
-        }
+        const fetchData = async () => {
+            const result = await getGigs();
+            setData(result);
+        };
+
+        fetchData();
     }, []);
+
+	function formatNumber(num: number) {
+        if (num >= 1000) {
+            return (num / 1000).toFixed(1) + "k"; // toFixed(1) ensures one decimal place
+        }
+        return num.toString(); // return the number as a string if it's less than 1000
+    }
 	
     return (
         <>
@@ -60,7 +67,7 @@ export const PostGigs = () => {
                 <div className={styles.AvailableGigsWrapper}>
                     <h1>Currently available gigs</h1>
                     <div className={styles.DataBlockWrapper}>
-                        {[...gigs].reverse().map((gig, index) => (
+                        {data.map((gig, index) => (
                             <div
                                 className={styles.IndividualWrapper}
                                 key={index}
@@ -70,20 +77,22 @@ export const PostGigs = () => {
                             >
                                 <div className={styles.firstDiv}>
                                     <img src={image} alt="" />
-                                    <p>{gig.title}</p>
+                                    <p>{gig.role}</p>
                                 </div>
                                 <div className={styles.SecondDiv}>
-                                    <h1>{gig.companyName}</h1>
+                                    <h1>{gig.companyname}</h1>
                                     <p>{gig.description}</p>
                                     <div className={styles.StacksWrapper}>
-                                        {gig.skills.map((stack, stackIndex) => (
-                                            <p key={stackIndex}>{stack}</p>
-                                        ))}
+                                        {gig.skills
+                                            .split(", ")
+                                            .map((stack, stackIndex) => (
+                                                <p key={stackIndex}>{stack}</p>
+                                            ))}
                                     </div>
                                 </div>
                                 <div className={styles.ThirdDiv}>
                                     <p>Upto</p>
-                                    <h1>{gig.budget}</h1>
+                                    <h1>{formatNumber(Number(gig.amount))}</h1>
                                     <p>INR</p>
                                 </div>
                             </div>
