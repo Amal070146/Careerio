@@ -11,6 +11,7 @@ export const registerUser = async (data:RegisterUserData) => {
         console.log(response.data);
     } catch (error) {
         console.error("API error:", error);
+		throw error
     }
 }
 
@@ -24,5 +25,6 @@ export const loginUser = async (data: LoginUserData) => {
 		localStorage.setItem("accessToken", response.data.token);
     } catch (error) {
         console.error("API error:", error);
+		throw error
     }
 }
