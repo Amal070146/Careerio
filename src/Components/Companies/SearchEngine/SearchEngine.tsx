@@ -2,6 +2,7 @@ import styles from "./SearchEngine.module.css";
 
 import data from "./data.json";
 import { DjangoLogo, MongoDBLogo, ReactLogo } from "./StackLogo";
+import { useNavigate } from "react-router-dom";
 
 export const SearchEngine = () => {
     const stacks = [
@@ -18,6 +19,8 @@ export const SearchEngine = () => {
             image: <ReactLogo colors={"white"} />,
         },
     ];
+
+	const navigate = useNavigate()
     return (
         <div className={styles.SearchEngineWrapper}>
             <div className={styles.SearchBarWrapper}>
@@ -35,7 +38,7 @@ export const SearchEngine = () => {
                 <h1>Search By Profile</h1>
                 <div>
                     {data.slice(0,6).map(({ name, profile, muid, roles }) => (
-                        <div key={muid} className={styles.ProfileCard}>
+                        <div key={muid} className={styles.ProfileCard} onClick={() => navigate(`/profile/${muid}`)}>
                             <div>
                                 <img src={profile} alt={`${name} profile`} />
                                 <div>
